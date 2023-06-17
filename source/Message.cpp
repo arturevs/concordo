@@ -19,3 +19,11 @@ bool Message::operator==(const Message &other)
 {
     return (this->sentAt == other.sentAt && this->sentBy == other.sentBy && this->content == other.content);
 }
+
+Message Message::operator=(const Message &other)
+{
+    this->sentAt = other.sentAt;
+    this->sentBy = other.sentBy;
+    this->content = other.content;
+    return *this;
+}
