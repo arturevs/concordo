@@ -3,7 +3,7 @@
 
 class Channel
 {
-private:
+protected:
     std::string name;
 
 public:
