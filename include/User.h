@@ -10,8 +10,9 @@ private:
     std::string password;
 
 public:
-    User(int id, std::string name, std::string email, std::string password);
+    User(std::string name, std::string email, std::string password);
     int getId();
+    void setId(int id);
     std::string getName();
     std::string getEmail();
     std::string getPassword();
