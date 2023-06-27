@@ -1,0 +1,143 @@
+\doxysection{Referência da Classe Message}
+\hypertarget{classMessage}{}\label{classMessage}\index{Message@{Message}}
+
+
+Classe que representa uma mensagem.  
+
+
+
+
+{\ttfamily \#include $<$Message.\+h$>$}
+
+\doxysubsubsection*{Membros Públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classMessage_af306cbad1859806581794e551a24cbd5}{Message}} (std\+::string sent\+At, int sent\+By, std\+::string content)
+\begin{DoxyCompactList}\small\item\em Construtor de \doxylink{classMessage}{Message}. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classMessage_a245ada8fe5413a593652e3e93d2201d9}{get\+Sent\+At}} ()
+\begin{DoxyCompactList}\small\item\em Retorna a data de envio da mensagem. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classMessage_a6cfa36accfb722f2ed116769a0f3fbe5}{get\+Sent\+By}} ()
+\begin{DoxyCompactList}\small\item\em Retorna o id de quem enviou a mensagem. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classMessage_a90a0a3b57b2711be07d0786334a30106}{get\+Content}} ()
+\begin{DoxyCompactList}\small\item\em Retorna o conteúdo da mensagem. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classMessage_a3d5b2c3616e765d213584778f1050595}{operator==}} (const \mbox{\hyperlink{classMessage}{Message}} \&other)
+\begin{DoxyCompactList}\small\item\em Sobrecarga do operador de comparação. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classMessage}{Message}} \mbox{\hyperlink{classMessage_ad2b9dfa8e9b33a367cdb9a5c8b4bbe87}{operator=}} (const \mbox{\hyperlink{classMessage}{Message}} \&other)
+\begin{DoxyCompactList}\small\item\em Sobrecarga do operador de atribuição. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Atributos Privados}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classMessage_acbd2db4b514070b5e652441559680108}\label{classMessage_acbd2db4b514070b5e652441559680108} 
+std\+::string {\bfseries sent\+At}
+\item 
+\Hypertarget{classMessage_a3421dadaf640b33106dfb10317896cc9}\label{classMessage_a3421dadaf640b33106dfb10317896cc9} 
+int {\bfseries sent\+By}
+\item 
+\Hypertarget{classMessage_a36784a7ac2476aac316356ead63a59ef}\label{classMessage_a36784a7ac2476aac316356ead63a59ef} 
+std\+::string {\bfseries content}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descrição detalhada}
+Classe que representa uma mensagem. 
+
+
+
+\doxysubsection{Construtores e Destrutores}
+\Hypertarget{classMessage_af306cbad1859806581794e551a24cbd5}\label{classMessage_af306cbad1859806581794e551a24cbd5} 
+\index{Message@{Message}!Message@{Message}}
+\index{Message@{Message}!Message@{Message}}
+\doxysubsubsection{\texorpdfstring{Message()}{Message()}}
+{\footnotesize\ttfamily Message\+::\+Message (\begin{DoxyParamCaption}\item[{std\+::string}]{sent\+At,  }\item[{int}]{sent\+By,  }\item[{std\+::string}]{content }\end{DoxyParamCaption})}
+
+
+
+Construtor de \doxylink{classMessage}{Message}. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em sent\+At} & \\
+\hline
+{\em sent\+By} & \\
+\hline
+{\em content} & \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Documentação das funções}
+\Hypertarget{classMessage_a90a0a3b57b2711be07d0786334a30106}\label{classMessage_a90a0a3b57b2711be07d0786334a30106} 
+\index{Message@{Message}!getContent@{getContent}}
+\index{getContent@{getContent}!Message@{Message}}
+\doxysubsubsection{\texorpdfstring{getContent()}{getContent()}}
+{\footnotesize\ttfamily std\+::string Message\+::get\+Content (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Retorna o conteúdo da mensagem. 
+
+\begin{DoxyReturn}{Retorna}
+std\+::string 
+\end{DoxyReturn}
+\Hypertarget{classMessage_a245ada8fe5413a593652e3e93d2201d9}\label{classMessage_a245ada8fe5413a593652e3e93d2201d9} 
+\index{Message@{Message}!getSentAt@{getSentAt}}
+\index{getSentAt@{getSentAt}!Message@{Message}}
+\doxysubsubsection{\texorpdfstring{getSentAt()}{getSentAt()}}
+{\footnotesize\ttfamily std\+::string Message\+::get\+Sent\+At (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Retorna a data de envio da mensagem. 
+
+\begin{DoxyReturn}{Retorna}
+std\+::string 
+\end{DoxyReturn}
+\Hypertarget{classMessage_a6cfa36accfb722f2ed116769a0f3fbe5}\label{classMessage_a6cfa36accfb722f2ed116769a0f3fbe5} 
+\index{Message@{Message}!getSentBy@{getSentBy}}
+\index{getSentBy@{getSentBy}!Message@{Message}}
+\doxysubsubsection{\texorpdfstring{getSentBy()}{getSentBy()}}
+{\footnotesize\ttfamily int Message\+::get\+Sent\+By (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Retorna o id de quem enviou a mensagem. 
+
+\begin{DoxyReturn}{Retorna}
+int 
+\end{DoxyReturn}
+\Hypertarget{classMessage_ad2b9dfa8e9b33a367cdb9a5c8b4bbe87}\label{classMessage_ad2b9dfa8e9b33a367cdb9a5c8b4bbe87} 
+\index{Message@{Message}!operator=@{operator=}}
+\index{operator=@{operator=}!Message@{Message}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classMessage}{Message}} Message\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classMessage}{Message}} \&}]{other }\end{DoxyParamCaption})}
+
+
+
+Sobrecarga do operador de atribuição. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em sent\+By} & \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classMessage_a3d5b2c3616e765d213584778f1050595}\label{classMessage_a3d5b2c3616e765d213584778f1050595} 
+\index{Message@{Message}!operator==@{operator==}}
+\index{operator==@{operator==}!Message@{Message}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily bool Message\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classMessage}{Message}} \&}]{other }\end{DoxyParamCaption})}
+
+
+
+Sobrecarga do operador de comparação. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em sent\+At} & \\
+\hline
+\end{DoxyParams}
+
+
+A documentação para essa classe foi gerada a partir dos seguintes arquivos\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{Message_8h}{Message.\+h}}\item 
+source/\mbox{\hyperlink{Message_8cpp}{Message.\+cpp}}\end{DoxyCompactItemize}

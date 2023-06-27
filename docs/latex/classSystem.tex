@@ -1,0 +1,329 @@
+\doxysection{Referência da Classe System}
+\hypertarget{classSystem}{}\label{classSystem}\index{System@{System}}
+
+
+Classe que representa o sistema.  
+
+
+
+
+{\ttfamily \#include $<$System.\+h$>$}
+
+\doxysubsubsection*{Membros Públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classChannel}{Channel}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classSystem_abfd65c5d9fa56c6a8f299a82d1b00398}{get\+\_\+current\+\_\+channel}} ()
+\begin{DoxyCompactList}\small\item\em Retorna o ponteiro para o canal atual. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classServer}{Server}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classSystem_a8e907677fe6c6bb5796de6be9a17cc8d}{get\+\_\+current\+\_\+server}} ()
+\begin{DoxyCompactList}\small\item\em Retorna o ponteiro para o servidor atual. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classSystem_ae1b8a6a957425ae35fc309ca4fbd32ca}{logged\+\_\+user\+\_\+name}} ()
+\begin{DoxyCompactList}\small\item\em Retorna o nome do usuário logado. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classSystem_a746f07732cc2a226caf3bac0a06e45a0}{logged\+\_\+email}} ()
+\begin{DoxyCompactList}\small\item\em Retorna o email do usuário logado. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classSystem_a9d077b7e4aadc4ae3e397af5751e0be1}{increase\+\_\+l\+\_\+id}} ()
+\begin{DoxyCompactList}\small\item\em Aumenta o id do próximo usuário a ser criado. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classSystem_a08af5fa5fbe978dd01578756545c4320}{executable}} ()
+\begin{DoxyCompactList}\small\item\em Método que executa o sistema. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classSystem_a98a86a9f5b2a17ce53bb5d49f16042e4}{create\+\_\+user}} (std\+::string email, std\+::string password, std\+::string name)
+\begin{DoxyCompactList}\small\item\em Método que cria um usuário. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classSystem_aea066b609ba4625b82dc63dc31635a9c}{login}} (std\+::string email, std\+::string password)
+\begin{DoxyCompactList}\small\item\em Método que faz o login de um usuário. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classSystem_a66379777d789c071beb96b3b0253f212}{disconnect}} ()
+\begin{DoxyCompactList}\small\item\em Método que faz o logout de um usuário. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classSystem_a8c3fe5ff4be22637f4c8ba363d1e548d}{create\+\_\+server}} (std\+::string name)
+\begin{DoxyCompactList}\small\item\em Método que cria um servidor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classSystem_aa6e9d78181c109bd512cb8df3f58a2ef}{change\+\_\+server\+\_\+description}} (std\+::string name, std\+::string description)
+\begin{DoxyCompactList}\small\item\em Método que altera a descrição de um servidor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classSystem_a03199ac183c45a4bf5402cf3cfeacd78}{set\+\_\+server\+\_\+invite\+\_\+code}} (std\+::string name, std\+::string invite\+\_\+code)
+\begin{DoxyCompactList}\small\item\em Método que altera o código de convite de um servidor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classSystem_aa617e2105f8efa73f5d90841ab974bfc}{list\+\_\+servers}} ()
+\begin{DoxyCompactList}\small\item\em Método que lista os servidores. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classSystem_a897de87a4634de5e9c16a060abf4faaf}{remove\+\_\+server}} (std\+::string name)
+\begin{DoxyCompactList}\small\item\em Método que remove um servidor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classSystem_a9a58f0bfdd1dcbc95463ad5ed74d59eb}{join\+\_\+server}} (std\+::string name, std\+::string invite\+\_\+code)
+\begin{DoxyCompactList}\small\item\em Método que adiciona o usuário em um servidor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classSystem_a4b48d1dd934820e7140445d705c08e27}{enter\+\_\+server}} (std\+::string name)
+\begin{DoxyCompactList}\small\item\em Método que entra em um servidor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classSystem_a6fb9f04c442be1d9f598428f30ccd666}{leave\+\_\+server}} ()
+\begin{DoxyCompactList}\small\item\em Método que sai de um servidor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Atributos Privados}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classSystem_a838df5539081f686fe2f500c9296265f}\label{classSystem_a838df5539081f686fe2f500c9296265f} 
+int {\bfseries l\+\_\+id\+\_\+assigned} = 1
+\begin{DoxyCompactList}\small\item\em Variável que guarda o id do próximo usuário a ser criado. \end{DoxyCompactList}\item 
+\Hypertarget{classSystem_a2cb7915b554b9c07ed297d671c58fdd2}\label{classSystem_a2cb7915b554b9c07ed297d671c58fdd2} 
+int {\bfseries logged\+\_\+user} = -\/1
+\begin{DoxyCompactList}\small\item\em Variável que guarda o id do usuário logado. \end{DoxyCompactList}\item 
+\Hypertarget{classSystem_a4959741b784cdd8ca47fea88f9ac322a}\label{classSystem_a4959741b784cdd8ca47fea88f9ac322a} 
+std\+::vector$<$ \mbox{\hyperlink{classUser}{User}} $>$ {\bfseries users}
+\begin{DoxyCompactList}\small\item\em Vetor que guarda todos os usuários do sistema. \end{DoxyCompactList}\item 
+\Hypertarget{classSystem_a943ce8571d2b4ab0c87bade98db66b3d}\label{classSystem_a943ce8571d2b4ab0c87bade98db66b3d} 
+std\+::vector$<$ \mbox{\hyperlink{classServer}{Server}} $>$ {\bfseries servers}
+\begin{DoxyCompactList}\small\item\em Vetor que guarda todos os servidores do sistema. \end{DoxyCompactList}\item 
+\Hypertarget{classSystem_abf05e9087e3deb3afceadc8f44af09a4}\label{classSystem_abf05e9087e3deb3afceadc8f44af09a4} 
+\mbox{\hyperlink{classServer}{Server}} \texorpdfstring{$\ast$}{*} {\bfseries current\+\_\+server} = nullptr
+\begin{DoxyCompactList}\small\item\em Ponteiro para o servidor atual. \end{DoxyCompactList}\item 
+\Hypertarget{classSystem_a7e3fc3093b96143ef1528c11b4f42b6e}\label{classSystem_a7e3fc3093b96143ef1528c11b4f42b6e} 
+\mbox{\hyperlink{classChannel}{Channel}} \texorpdfstring{$\ast$}{*} {\bfseries current\+\_\+channel}
+\begin{DoxyCompactList}\small\item\em Ponteiro para o canal atual. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descrição detalhada}
+Classe que representa o sistema. 
+
+
+
+\doxysubsection{Documentação das funções}
+\Hypertarget{classSystem_aa6e9d78181c109bd512cb8df3f58a2ef}\label{classSystem_aa6e9d78181c109bd512cb8df3f58a2ef} 
+\index{System@{System}!change\_server\_description@{change\_server\_description}}
+\index{change\_server\_description@{change\_server\_description}!System@{System}}
+\doxysubsubsection{\texorpdfstring{change\_server\_description()}{change\_server\_description()}}
+{\footnotesize\ttfamily void System\+::change\+\_\+server\+\_\+description (\begin{DoxyParamCaption}\item[{std\+::string}]{name,  }\item[{std\+::string}]{description }\end{DoxyParamCaption})}
+
+
+
+Método que altera a descrição de um servidor. 
+
+Altera a descrição do servidor.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em name} & nome do servidor \\
+\hline
+{\em description} & nova descrição do servidor \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classSystem_a8c3fe5ff4be22637f4c8ba363d1e548d}\label{classSystem_a8c3fe5ff4be22637f4c8ba363d1e548d} 
+\index{System@{System}!create\_server@{create\_server}}
+\index{create\_server@{create\_server}!System@{System}}
+\doxysubsubsection{\texorpdfstring{create\_server()}{create\_server()}}
+{\footnotesize\ttfamily void System\+::create\+\_\+server (\begin{DoxyParamCaption}\item[{std\+::string}]{name }\end{DoxyParamCaption})}
+
+
+
+Método que cria um servidor. 
+
+Cria um novo servidor.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em name} & nome do servidor \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classSystem_a98a86a9f5b2a17ce53bb5d49f16042e4}\label{classSystem_a98a86a9f5b2a17ce53bb5d49f16042e4} 
+\index{System@{System}!create\_user@{create\_user}}
+\index{create\_user@{create\_user}!System@{System}}
+\doxysubsubsection{\texorpdfstring{create\_user()}{create\_user()}}
+{\footnotesize\ttfamily void System\+::create\+\_\+user (\begin{DoxyParamCaption}\item[{std\+::string}]{email,  }\item[{std\+::string}]{password,  }\item[{std\+::string}]{name }\end{DoxyParamCaption})}
+
+
+
+Método que cria um usuário. 
+
+Cria o usuário e o adiciona na lista de usuários do sistema.\Hypertarget{classSystem_a66379777d789c071beb96b3b0253f212}\label{classSystem_a66379777d789c071beb96b3b0253f212} 
+\index{System@{System}!disconnect@{disconnect}}
+\index{disconnect@{disconnect}!System@{System}}
+\doxysubsubsection{\texorpdfstring{disconnect()}{disconnect()}}
+{\footnotesize\ttfamily void System\+::disconnect (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Método que faz o logout de um usuário. 
+
+Desconecta o usuário logado.\Hypertarget{classSystem_a4b48d1dd934820e7140445d705c08e27}\label{classSystem_a4b48d1dd934820e7140445d705c08e27} 
+\index{System@{System}!enter\_server@{enter\_server}}
+\index{enter\_server@{enter\_server}!System@{System}}
+\doxysubsubsection{\texorpdfstring{enter\_server()}{enter\_server()}}
+{\footnotesize\ttfamily void System\+::enter\+\_\+server (\begin{DoxyParamCaption}\item[{std\+::string}]{name }\end{DoxyParamCaption})}
+
+
+
+Método que entra em um servidor. 
+
+Entra em um servidor.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em name} & nome do servidor. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classSystem_a08af5fa5fbe978dd01578756545c4320}\label{classSystem_a08af5fa5fbe978dd01578756545c4320} 
+\index{System@{System}!executable@{executable}}
+\index{executable@{executable}!System@{System}}
+\doxysubsubsection{\texorpdfstring{executable()}{executable()}}
+{\footnotesize\ttfamily void System\+::executable (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Método que executa o sistema. 
+
+A função chamada para executar o sistema.\Hypertarget{classSystem_abfd65c5d9fa56c6a8f299a82d1b00398}\label{classSystem_abfd65c5d9fa56c6a8f299a82d1b00398} 
+\index{System@{System}!get\_current\_channel@{get\_current\_channel}}
+\index{get\_current\_channel@{get\_current\_channel}!System@{System}}
+\doxysubsubsection{\texorpdfstring{get\_current\_channel()}{get\_current\_channel()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classChannel}{Channel}} \texorpdfstring{$\ast$}{*} System\+::get\+\_\+current\+\_\+channel (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Retorna o ponteiro para o canal atual. 
+
+Retona o ponteiro para o canal atual.
+
+\begin{DoxyReturn}{Retorna}
+Channel\texorpdfstring{$\ast$}{*} 
+\end{DoxyReturn}
+\Hypertarget{classSystem_a8e907677fe6c6bb5796de6be9a17cc8d}\label{classSystem_a8e907677fe6c6bb5796de6be9a17cc8d} 
+\index{System@{System}!get\_current\_server@{get\_current\_server}}
+\index{get\_current\_server@{get\_current\_server}!System@{System}}
+\doxysubsubsection{\texorpdfstring{get\_current\_server()}{get\_current\_server()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classServer}{Server}} \texorpdfstring{$\ast$}{*} System\+::get\+\_\+current\+\_\+server (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Retorna o ponteiro para o servidor atual. 
+
+\begin{DoxyReturn}{Retorna}
+Server\texorpdfstring{$\ast$}{*} 
+\end{DoxyReturn}
+\Hypertarget{classSystem_a9d077b7e4aadc4ae3e397af5751e0be1}\label{classSystem_a9d077b7e4aadc4ae3e397af5751e0be1} 
+\index{System@{System}!increase\_l\_id@{increase\_l\_id}}
+\index{increase\_l\_id@{increase\_l\_id}!System@{System}}
+\doxysubsubsection{\texorpdfstring{increase\_l\_id()}{increase\_l\_id()}}
+{\footnotesize\ttfamily int System\+::increase\+\_\+l\+\_\+id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Aumenta o id do próximo usuário a ser criado. 
+
+Atualiza o id que deve ser implementado em um novo usuário.
+
+\begin{DoxyReturn}{Retorna}
+int 
+\end{DoxyReturn}
+\Hypertarget{classSystem_a9a58f0bfdd1dcbc95463ad5ed74d59eb}\label{classSystem_a9a58f0bfdd1dcbc95463ad5ed74d59eb} 
+\index{System@{System}!join\_server@{join\_server}}
+\index{join\_server@{join\_server}!System@{System}}
+\doxysubsubsection{\texorpdfstring{join\_server()}{join\_server()}}
+{\footnotesize\ttfamily void System\+::join\+\_\+server (\begin{DoxyParamCaption}\item[{std\+::string}]{name,  }\item[{std\+::string}]{invite\+\_\+code }\end{DoxyParamCaption})}
+
+
+
+Método que adiciona o usuário em um servidor. 
+
+Adiciona o usuário ao servidor name.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em name} & nome do servidor \\
+\hline
+{\em invite\+\_\+code} & código de convite do servidor \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classSystem_a6fb9f04c442be1d9f598428f30ccd666}\label{classSystem_a6fb9f04c442be1d9f598428f30ccd666} 
+\index{System@{System}!leave\_server@{leave\_server}}
+\index{leave\_server@{leave\_server}!System@{System}}
+\doxysubsubsection{\texorpdfstring{leave\_server()}{leave\_server()}}
+{\footnotesize\ttfamily void System\+::leave\+\_\+server (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Método que sai de um servidor. 
+
+Sai do servidor atual.\Hypertarget{classSystem_aa617e2105f8efa73f5d90841ab974bfc}\label{classSystem_aa617e2105f8efa73f5d90841ab974bfc} 
+\index{System@{System}!list\_servers@{list\_servers}}
+\index{list\_servers@{list\_servers}!System@{System}}
+\doxysubsubsection{\texorpdfstring{list\_servers()}{list\_servers()}}
+{\footnotesize\ttfamily void System\+::list\+\_\+servers (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Método que lista os servidores. 
+
+Lista os servidores do sistema.\Hypertarget{classSystem_a746f07732cc2a226caf3bac0a06e45a0}\label{classSystem_a746f07732cc2a226caf3bac0a06e45a0} 
+\index{System@{System}!logged\_email@{logged\_email}}
+\index{logged\_email@{logged\_email}!System@{System}}
+\doxysubsubsection{\texorpdfstring{logged\_email()}{logged\_email()}}
+{\footnotesize\ttfamily std\+::string System\+::logged\+\_\+email (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Retorna o email do usuário logado. 
+
+\begin{DoxyReturn}{Retorna}
+std\+::string 
+\end{DoxyReturn}
+\Hypertarget{classSystem_ae1b8a6a957425ae35fc309ca4fbd32ca}\label{classSystem_ae1b8a6a957425ae35fc309ca4fbd32ca} 
+\index{System@{System}!logged\_user\_name@{logged\_user\_name}}
+\index{logged\_user\_name@{logged\_user\_name}!System@{System}}
+\doxysubsubsection{\texorpdfstring{logged\_user\_name()}{logged\_user\_name()}}
+{\footnotesize\ttfamily std\+::string System\+::logged\+\_\+user\+\_\+name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Retorna o nome do usuário logado. 
+
+\begin{DoxyReturn}{Retorna}
+std\+::string 
+\end{DoxyReturn}
+\Hypertarget{classSystem_aea066b609ba4625b82dc63dc31635a9c}\label{classSystem_aea066b609ba4625b82dc63dc31635a9c} 
+\index{System@{System}!login@{login}}
+\index{login@{login}!System@{System}}
+\doxysubsubsection{\texorpdfstring{login()}{login()}}
+{\footnotesize\ttfamily void System\+::login (\begin{DoxyParamCaption}\item[{std\+::string}]{email,  }\item[{std\+::string}]{password }\end{DoxyParamCaption})}
+
+
+
+Método que faz o login de um usuário. 
+
+Realiza o login do usuário.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em email} & do usuário tentando login \\
+\hline
+{\em password} & do usuário tentando login \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classSystem_a897de87a4634de5e9c16a060abf4faaf}\label{classSystem_a897de87a4634de5e9c16a060abf4faaf} 
+\index{System@{System}!remove\_server@{remove\_server}}
+\index{remove\_server@{remove\_server}!System@{System}}
+\doxysubsubsection{\texorpdfstring{remove\_server()}{remove\_server()}}
+{\footnotesize\ttfamily void System\+::remove\+\_\+server (\begin{DoxyParamCaption}\item[{std\+::string}]{name }\end{DoxyParamCaption})}
+
+
+
+Método que remove um servidor. 
+
+Remove um servidor do sistema.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em name} & nome do servidor \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classSystem_a03199ac183c45a4bf5402cf3cfeacd78}\label{classSystem_a03199ac183c45a4bf5402cf3cfeacd78} 
+\index{System@{System}!set\_server\_invite\_code@{set\_server\_invite\_code}}
+\index{set\_server\_invite\_code@{set\_server\_invite\_code}!System@{System}}
+\doxysubsubsection{\texorpdfstring{set\_server\_invite\_code()}{set\_server\_invite\_code()}}
+{\footnotesize\ttfamily void System\+::set\+\_\+server\+\_\+invite\+\_\+code (\begin{DoxyParamCaption}\item[{std\+::string}]{name,  }\item[{std\+::string}]{invite\+\_\+code }\end{DoxyParamCaption})}
+
+
+
+Método que altera o código de convite de um servidor. 
+
+Altera o código de convite do servidor.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em name} & nome do servidor \\
+\hline
+{\em invite\+\_\+code} & novo código de convite \\
+\hline
+\end{DoxyParams}
+
+
+A documentação para essa classe foi gerada a partir dos seguintes arquivos\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{System_8h}{System.\+h}}\item 
+source/\mbox{\hyperlink{System_8cpp}{System.\+cpp}}\end{DoxyCompactItemize}

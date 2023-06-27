@@ -1,16 +1,11 @@
-cmake_minimum_required(VERSION 3.22.1)
-project(teste VERSION 0.1 LANGUAGES CXX )
+cmake_minimum_required(VERSION 3.12)
+project(concordo)
 
-set( CMAKE_CXX_FLAGS "-Wall")
+# Add the include directory
+include_directories(include)
 
-include_directories( include )
+# Collect all the source files
+file(GLOB SOURCES "source/*.cpp")
 
-
-add_executable(
-    src/Channel.cpp
-    src/Message.cpp
-    src/Server.cpp
-    src/System.cpp
-    src/User.cpp)
-
-set_property(TARGET program PROPERTY CXX_STANDARD 14)
+# Create the executable
+add_executable(${PROJECT_NAME} ${SOURCES})

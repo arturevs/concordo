@@ -1,0 +1,24 @@
+\doxysection{Message.\+h}
+\hypertarget{Message_8h_source}{}\label{Message_8h_source}\index{include/Message.h@{include/Message.h}}
+\mbox{\hyperlink{Message_8h}{Ir para a documentação desse arquivo.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00012\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classMessage}{Message}}}
+\DoxyCodeLine{00013\ \{}
+\DoxyCodeLine{00014\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00015\ \ \ \ \ std::string\ sentAt;\ \textcolor{comment}{//<!\ Variável\ que\ guarda\ o\ horário\ de\ envio\ da\ mensagem.}}
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keywordtype}{int}\ sentBy;\ \ \ \ \ \ \ \ \textcolor{comment}{//<!\ Variável\ que\ guarda\ o\ id\ do\ usuário\ que\ enviou\ a\ mensagem.}}
+\DoxyCodeLine{00017\ \ \ \ \ std::string\ content;\ \textcolor{comment}{//<!\ Variável\ que\ guarda\ o\ conteúdo\ da\ mensagem.}}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00020\ \ \ \ \ \mbox{\hyperlink{classMessage}{Message}}(std::string\ sentAt,\ \textcolor{keywordtype}{int}\ sentBy,\ std::string\ content);\ \textcolor{comment}{//<!\ Construtor\ da\ classe\ Message.}}
+\DoxyCodeLine{00021\ \ \ \ \ std::string\ \mbox{\hyperlink{classMessage_a245ada8fe5413a593652e3e93d2201d9}{getSentAt}}();\ \textcolor{comment}{//<!\ Método\ que\ retorna\ o\ horário\ de\ envio\ da\ mensagem.}}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classMessage_a6cfa36accfb722f2ed116769a0f3fbe5}{getSentBy}}();\ \ \ \ \ \ \ \textcolor{comment}{//<!\ Método\ que\ retorna\ o\ id\ do\ usuário\ que\ enviou\ a\ mensagem.}}
+\DoxyCodeLine{00023\ \ \ \ \ std::string\ \mbox{\hyperlink{classMessage_a90a0a3b57b2711be07d0786334a30106}{getContent}}();\ \textcolor{comment}{//<!\ Método\ que\ retorna\ o\ conteúdo\ da\ mensagem.}}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classMessage_a3d5b2c3616e765d213584778f1050595}{operator==}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classMessage}{Message}}\ \&other);\ \textcolor{comment}{//<!\ Sobrecarga\ do\ operador\ de\ comparação.}}
+\DoxyCodeLine{00025\ \ \ \ \ \mbox{\hyperlink{classMessage}{Message}}\ \mbox{\hyperlink{classMessage_ad2b9dfa8e9b33a367cdb9a5c8b4bbe87}{operator=}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classMessage}{Message}}\ \&other);\ \textcolor{comment}{//<!\ Sobrecarga\ do\ operador\ de\ atribuição.}}
+\DoxyCodeLine{00026\ \};}
+
+\end{DoxyCode}
