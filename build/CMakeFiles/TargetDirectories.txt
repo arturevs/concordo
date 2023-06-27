@@ -1,3 +1,0 @@
-/home/turevs/faculdade/concordo/build/CMakeFiles/concordo.dir
-/home/turevs/faculdade/concordo/build/CMakeFiles/edit_cache.dir
-/home/turevs/faculdade/concordo/build/CMakeFiles/rebuild_cache.dir
