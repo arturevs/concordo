@@ -343,7 +343,7 @@ void System::executable()
             std::cout << "Quitting Concordo" << '\n';
             return;
         }
-        else if(command == "create-user")
+        else if(command == "create-user" && !LOGGED)
         {
             std::string email, password, name;
             std::cin >> email >> password;
