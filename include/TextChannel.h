@@ -1,3 +1,8 @@
+/**
+ * @file TextChannel.h
+ * @brief Classe que representa um canal de texto
+ */
+
 #ifndef TEXTCHANNEL_H
 #define TEXTCHANNEL_H
 
