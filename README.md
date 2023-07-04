@@ -74,3 +74,4 @@ Caso o login seja efetuado então outros comandos ficarão disponíveis para o u
 * list-messages
 
  Nesse o usuário lista as mensagens do canal atual.
+ .
