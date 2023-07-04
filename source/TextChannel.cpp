@@ -37,3 +37,11 @@ void TextChannel::send(std::string message, int logged_user_id)
     msg.setContent(message);
     messages.push_back(msg);
 }
+
+void TextChannel::list_messages()
+{
+    for (int i = 0; i < messages.size(); i++)
+    {
+        std::cout << messages[i].getSentBy() << " " << messages[i].getSentAt() << " " << messages[i].getContent() << std::endl;
+    }
+}

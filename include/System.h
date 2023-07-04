@@ -48,6 +48,7 @@ class System
         void enter_server(std::string name); //!< Método que entra em um servidor.
         void leave_server(); //!< Método que sai de um servidor.
         void enter_channel(std::string name); //!< Método que entra em um canal.
+        void send_message(); //!< Método que envia uma mensagem.
 };
 
 #endif

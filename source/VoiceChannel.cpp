@@ -47,3 +47,8 @@ void VoiceChannel::send(std::string message, int logged_user_id)
     msg.setContent(message);
     last_message = msg;
 }
+
+void VoiceChannel::list_messages()
+{
+    std::cout << last_message.getSentBy() << " " << last_message.getSentAt() << " " << last_message.getContent() << std::endl;
+}

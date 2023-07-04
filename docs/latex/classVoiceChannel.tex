@@ -14,7 +14,10 @@ Diagrama de hierarquia da classe Voice\+Channel\+:\begin{figure}[H]
 \mbox{\hyperlink{classMessage}{Message}} \mbox{\hyperlink{classVoiceChannel_a4a73fc9d98e0c578a862a3f01f1de3d4}{get\+Last\+Message}} ()
 \begin{DoxyCompactList}\small\item\em Método que retorna a última mensagem enviada no canal. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classVoiceChannel_a18846c80f7df76ea3cdc4cb23842996d}{send}} (std\+::string message, int logged\+\_\+user\+\_\+id)
-\begin{DoxyCompactList}\small\item\em Método que envia uma mensagem no canal. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Método que envia uma mensagem no canal. \end{DoxyCompactList}\item 
+\Hypertarget{classVoiceChannel_a01a6f711c7e970c316da01e5530fe158}\label{classVoiceChannel_a01a6f711c7e970c316da01e5530fe158} 
+void {\bfseries list\+\_\+messages} ()
+\end{DoxyCompactItemize}
 \doxysubsection*{Membros Públicos herdados de \mbox{\hyperlink{classChannel}{Channel}}}
 \begin{DoxyCompactItemize}
 \item 
@@ -22,7 +25,13 @@ void \mbox{\hyperlink{classVoiceChannel_a18846c80f7df76ea3cdc4cb23842996d}{send}
 \begin{DoxyCompactList}\small\item\em Construtor da classe \doxylink{classChannel}{Channel}. \end{DoxyCompactList}\item 
 \Hypertarget{classChannel_a47bbe41c4e81ca500b27dd7efd1b3376}\label{classChannel_a47bbe41c4e81ca500b27dd7efd1b3376} 
 std\+::string {\bfseries get\+Name} ()
-\begin{DoxyCompactList}\small\item\em Método que retorna o nome do canal. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Método que retorna o nome do canal. \end{DoxyCompactList}\item 
+\Hypertarget{classChannel_a408d13a09374e6402cb581c69161cb68}\label{classChannel_a408d13a09374e6402cb581c69161cb68} 
+void {\bfseries send\+\_\+message} (std\+::string message, int logged\+\_\+user\+\_\+id)
+\begin{DoxyCompactList}\small\item\em Método que envia uma mensagem no canal. \end{DoxyCompactList}\item 
+\Hypertarget{classChannel_a8aba659fece5ea0b991f7563b8a0fa01}\label{classChannel_a8aba659fece5ea0b991f7563b8a0fa01} 
+void {\bfseries list\+\_\+messages} ()
+\begin{DoxyCompactList}\small\item\em Método que lista as mensagens do canal. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Atributos Privados}
 \begin{DoxyCompactItemize}
 \item 

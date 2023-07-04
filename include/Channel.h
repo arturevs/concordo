@@ -20,6 +20,8 @@ protected:
 public:
     Channel(std::string name); //!< Construtor da classe Channel.
     std::string getName(); //!< Método que retorna o nome do canal.
+    void send_message(std::string message, int logged_user_id){std::cout << "place holder";} //!< Método que envia uma mensagem no canal.
+    void list_messages(){std::cout << "place holder";} //!< Método que lista as mensagens do canal.
 };
 
 #endif

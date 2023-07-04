@@ -21,7 +21,10 @@ Diagrama de hierarquia da classe Text\+Channel\+:\begin{figure}[H]
 \mbox{\hyperlink{classTextChannel_a037fa140223678f28f870ff9d724ac7a}{Text\+Channel}} (std\+::string \mbox{\hyperlink{classChannel_ae080e1afd52f3b70e04c62fea46447aa}{name}})
 \begin{DoxyCompactList}\small\item\em Construtor da classe \doxylink{classTextChannel}{Text\+Channel}. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classTextChannel_a8d1091aae8d0192cfbba678eaa3cbaef}{send}} (std\+::string message, int logged\+\_\+user\+\_\+id)
-\begin{DoxyCompactList}\small\item\em Método que envia uma mensagem no canal. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Método que envia uma mensagem no canal. \end{DoxyCompactList}\item 
+\Hypertarget{classTextChannel_a9a94c314db53b607c19b8e3d8875c1f0}\label{classTextChannel_a9a94c314db53b607c19b8e3d8875c1f0} 
+void {\bfseries list\+\_\+messages} ()
+\end{DoxyCompactItemize}
 \doxysubsection*{Membros Públicos herdados de \mbox{\hyperlink{classChannel}{Channel}}}
 \begin{DoxyCompactItemize}
 \item 
@@ -29,7 +32,13 @@ void \mbox{\hyperlink{classTextChannel_a8d1091aae8d0192cfbba678eaa3cbaef}{send}}
 \begin{DoxyCompactList}\small\item\em Construtor da classe \doxylink{classChannel}{Channel}. \end{DoxyCompactList}\item 
 \Hypertarget{classChannel_a47bbe41c4e81ca500b27dd7efd1b3376}\label{classChannel_a47bbe41c4e81ca500b27dd7efd1b3376} 
 std\+::string {\bfseries get\+Name} ()
-\begin{DoxyCompactList}\small\item\em Método que retorna o nome do canal. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Método que retorna o nome do canal. \end{DoxyCompactList}\item 
+\Hypertarget{classChannel_a408d13a09374e6402cb581c69161cb68}\label{classChannel_a408d13a09374e6402cb581c69161cb68} 
+void {\bfseries send\+\_\+message} (std\+::string message, int logged\+\_\+user\+\_\+id)
+\begin{DoxyCompactList}\small\item\em Método que envia uma mensagem no canal. \end{DoxyCompactList}\item 
+\Hypertarget{classChannel_a8aba659fece5ea0b991f7563b8a0fa01}\label{classChannel_a8aba659fece5ea0b991f7563b8a0fa01} 
+void {\bfseries list\+\_\+messages} ()
+\begin{DoxyCompactList}\small\item\em Método que lista as mensagens do canal. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Atributos Privados}
 \begin{DoxyCompactItemize}
 \item 

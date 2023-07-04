@@ -24,6 +24,7 @@ class TextChannel : public Channel
     public:
         TextChannel(std::string name); //!< Construtor da classe TextChannel.
         void send(std::string message, int logged_user_id); //!< Método que envia uma mensagem no canal.
+        void list_messages();
 };
 
 #endif

@@ -359,9 +359,19 @@ void System::enter_channel(std::string name)
     }
 }
 
+/**
+ * @brief Envia uma mensagem para o canal atual.
+ * 
+ */
+void System::send_message()
+{
+    std::string message;
+    std::getline(std::cin, message, '\n');
+    current_channel->send_message(message, logged_user);
+}
 
 
-//================================================================================
+//=============================================================================================
 
 /**
  * @brief A função chamada para executar o sistema.
@@ -463,6 +473,14 @@ void System::executable()
                 std::string name;
                 std::cin >> name;
                 enter_channel(name);
+            }
+            else if(command == "send-message" && LOGGED && current_server != nullptr && current_channel != nullptr)
+            {
+                send_message();
+            }
+            else if(command == "list-messages" && LOGGED && current_server != nullptr && current_channel != nullptr)
+            {
+                current_channel->list_messages();
             }
             else std::cout << "Invalid command" << '\n';
 

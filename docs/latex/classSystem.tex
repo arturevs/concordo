@@ -47,7 +47,9 @@ void \mbox{\hyperlink{classSystem_a4b48d1dd934820e7140445d705c08e27}{enter\+\_\+
 void \mbox{\hyperlink{classSystem_a6fb9f04c442be1d9f598428f30ccd666}{leave\+\_\+server}} ()
 \begin{DoxyCompactList}\small\item\em Método que sai de um servidor. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classSystem_ac9fa73afbf96c8597ccd746846cc354f}{enter\+\_\+channel}} (std\+::string name)
-\begin{DoxyCompactList}\small\item\em Método que entra em um canal. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Método que entra em um canal. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classSystem_a1a090e02723dd00a34ae8d9dfc5bb2cd}{send\+\_\+message}} ()
+\begin{DoxyCompactList}\small\item\em Método que envia uma mensagem. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Atributos Privados}
 \begin{DoxyCompactItemize}
 \item 
@@ -314,7 +316,17 @@ Remove um servidor do sistema.
 {\em name} & nome do servidor \\
 \hline
 \end{DoxyParams}
-\Hypertarget{classSystem_a03199ac183c45a4bf5402cf3cfeacd78}\label{classSystem_a03199ac183c45a4bf5402cf3cfeacd78} 
+\Hypertarget{classSystem_a1a090e02723dd00a34ae8d9dfc5bb2cd}\label{classSystem_a1a090e02723dd00a34ae8d9dfc5bb2cd} 
+\index{System@{System}!send\_message@{send\_message}}
+\index{send\_message@{send\_message}!System@{System}}
+\doxysubsubsection{\texorpdfstring{send\_message()}{send\_message()}}
+{\footnotesize\ttfamily void System\+::send\+\_\+message (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Método que envia uma mensagem. 
+
+Envia uma mensagem para o canal atual.\Hypertarget{classSystem_a03199ac183c45a4bf5402cf3cfeacd78}\label{classSystem_a03199ac183c45a4bf5402cf3cfeacd78} 
 \index{System@{System}!set\_server\_invite\_code@{set\_server\_invite\_code}}
 \index{set\_server\_invite\_code@{set\_server\_invite\_code}!System@{System}}
 \doxysubsubsection{\texorpdfstring{set\_server\_invite\_code()}{set\_server\_invite\_code()}}
