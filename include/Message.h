@@ -17,6 +17,7 @@ private:
     std::string content; //<! Variável que guarda o conteúdo da mensagem.
 
 public:
+    Message();
     Message(std::string sentAt, int sentBy, std::string content); //<! Construtor da classe Message.
     std::string getSentAt(); //<! Método que retorna o horário de envio da mensagem.
     int getSentBy();       //<! Método que retorna o id do usuário que enviou a mensagem.

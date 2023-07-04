@@ -41,6 +41,7 @@ class Server
         void addMember(int id); //!< Método que adiciona um membro ao servidor.
         void removeMember(int id); //!< Método que remove um membro do servidor.
         void listMembers(); //!< Método que lista os membros do servidor.
+        bool memberExists(int id); //!< Método que verifica se um membro existe no servidor.
 };
 
 #endif

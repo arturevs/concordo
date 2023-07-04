@@ -177,3 +177,23 @@ void Server::listMembers()
         std::cout << members[i] << '\n';
     }
 }
+
+/**
+ * @brief Verifica se um membro existe no servidor
+ * 
+ * @param id 
+ * @return true 
+ * @return false 
+ */
+
+bool Server::memberExists(int id)
+{
+    for (int i = 0; i < members.size(); i++)
+    {
+        if (members[i] == id)
+        {
+            return true;
+        }
+    }
+    return false;
+}

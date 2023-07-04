@@ -14,6 +14,13 @@
  * @param sentBy 
  * @param content 
  */
+Message::Message()
+{
+    this->sentAt = "";
+    this->sentBy = 0;
+    this->content = "";
+}
+
 Message::Message(std::string sentAt, int sentBy, std::string content)
 {
     this->sentAt = sentAt;

@@ -112,10 +112,11 @@ void System::login(std::string email, std::string password)
         {
             logged_user = users[i].getId();
             std::cout << "User "<< users[i].getName() << " logged in succsessfully" << '\n';
+            std::cout << "User id: " << logged_user << '\n';
             return;
         }
     }
-    std::cout << "Usuário não encontrado" << '\n';
+    std::cout << "User not found" << '\n';
 }
 
 /**
@@ -273,12 +274,18 @@ void System::join_server(std::string name, std::string invite_code)
                 std::cout << "Invite code invalid" << '\n';
                 return;
             }
-            if(find(servers[i].getMembers().begin(), servers[i].getMembers().end(), logged_user) != servers[i].getMembers().end())
+            else if(servers[i].memberExists(logged_user) == true)
             {
                 std::cout << "You are already a member of this server" << '\n';
                 return;
             }
-            servers[i].addMember(logged_user);
+            else
+            {
+                servers[i].addMember(logged_user);
+                std::cout << "You joined the server " << name << " successfully" << '\n';
+                return;
+            }
+
         }
     }
 }
@@ -300,9 +307,17 @@ void System::enter_server(std::string name)
                 std::cout << "You are not a member of this server" << '\n';
                 return;
             }
-            current_server = &servers[i];
-            std::cout << "Server " << name << " selected successfully" << '\n';
-            return;
+            else if(current_server = &servers[i])
+            {
+                std::cout << "You are already in this server" << '\n';
+                return;
+            }
+            else
+            {
+                current_server = &servers[i];
+                std::cout << "Server " << name << " selected successfully" << '\n';
+                return;
+            }
         }
         i++;
     }
@@ -403,6 +418,10 @@ void System::executable()
             else if(command == "leave-server" && LOGGED)
             {
                 leave_server();
+            }
+            else if(command == "logged-user")
+            {
+                std::cout << "Logged user: " << logged_user << '\n';
             }
             else std::cout << "Invalid command" << '\n';
 
