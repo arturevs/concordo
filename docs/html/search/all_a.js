@@ -1,6 +1,4 @@
 var searchData=
 [
-  ['operator_3d_0',['operator=',['../classMessage.html#ad2b9dfa8e9b33a367cdb9a5c8b4bbe87',1,'Message']]],
-  ['operator_3d_3d_1',['operator==',['../classMessage.html#a3d5b2c3616e765d213584778f1050595',1,'Message::operator==()'],['../classUser.html#a02ee94b3502dcd0f7c133144836a7946',1,'User::operator==()']]],
-  ['owner_5fid_2',['owner_id',['../classServer.html#a76adc785b30c5663f210e5e841c0f614',1,'Server']]]
+  ['name_0',['name',['../classChannel.html#ae080e1afd52f3b70e04c62fea46447aa',1,'Channel::name'],['../classServer.html#a00cdc9361abb18a279ac64dde9488484',1,'Server::name'],['../classUser.html#a085d8d69282b6298964eab8351584536',1,'User::name']]]
 ];

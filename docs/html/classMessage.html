@@ -84,8 +84,11 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Membros Públicos</h2></td></tr>
-<tr class="memitem:af306cbad1859806581794e551a24cbd5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMessage.html#af306cbad1859806581794e551a24cbd5">Message</a> (std::string sentAt, int sentBy, std::string content)</td></tr>
-<tr class="memdesc:af306cbad1859806581794e551a24cbd5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construtor de <a class="el" href="classMessage.html" title="Classe que representa uma mensagem.">Message</a>.  <br /></td></tr>
+<tr class="memitem:a4fc4f717b634e66070366cb7722d7761"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMessage.html#a4fc4f717b634e66070366cb7722d7761">Message</a> ()</td></tr>
+<tr class="memdesc:a4fc4f717b634e66070366cb7722d7761"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construtor de <a class="el" href="classMessage.html" title="Classe que representa uma mensagem.">Message</a>.  <br /></td></tr>
+<tr class="separator:a4fc4f717b634e66070366cb7722d7761"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af306cbad1859806581794e551a24cbd5"><td class="memItemLeft" align="right" valign="top"><a id="af306cbad1859806581794e551a24cbd5" name="af306cbad1859806581794e551a24cbd5"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>Message</b> (std::string sentAt, int sentBy, std::string content)</td></tr>
 <tr class="separator:af306cbad1859806581794e551a24cbd5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a245ada8fe5413a593652e3e93d2201d9"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMessage.html#a245ada8fe5413a593652e3e93d2201d9">getSentAt</a> ()</td></tr>
 <tr class="memdesc:a245ada8fe5413a593652e3e93d2201d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retorna a data de envio da mensagem.  <br /></td></tr>
@@ -96,6 +99,15 @@ Membros Públicos</h2></td></tr>
 <tr class="memitem:a90a0a3b57b2711be07d0786334a30106"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMessage.html#a90a0a3b57b2711be07d0786334a30106">getContent</a> ()</td></tr>
 <tr class="memdesc:a90a0a3b57b2711be07d0786334a30106"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retorna o conteúdo da mensagem.  <br /></td></tr>
 <tr class="separator:a90a0a3b57b2711be07d0786334a30106"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a13802236edc9c0ba4c7637280867e92d"><td class="memItemLeft" align="right" valign="top"><a id="a13802236edc9c0ba4c7637280867e92d" name="a13802236edc9c0ba4c7637280867e92d"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setSentAt</b> (std::string sentAt)</td></tr>
+<tr class="separator:a13802236edc9c0ba4c7637280867e92d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aba52e1d0768feab0a893104411578acf"><td class="memItemLeft" align="right" valign="top"><a id="aba52e1d0768feab0a893104411578acf" name="aba52e1d0768feab0a893104411578acf"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setSentBy</b> (int sentBy)</td></tr>
+<tr class="separator:aba52e1d0768feab0a893104411578acf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3e49ef04aecda73cb7b3396ecb8cba20"><td class="memItemLeft" align="right" valign="top"><a id="a3e49ef04aecda73cb7b3396ecb8cba20" name="a3e49ef04aecda73cb7b3396ecb8cba20"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setContent</b> (std::string content)</td></tr>
+<tr class="separator:a3e49ef04aecda73cb7b3396ecb8cba20"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3d5b2c3616e765d213584778f1050595"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMessage.html#a3d5b2c3616e765d213584778f1050595">operator==</a> (const <a class="el" href="classMessage.html">Message</a> &amp;other)</td></tr>
 <tr class="memdesc:a3d5b2c3616e765d213584778f1050595"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sobrecarga do operador de comparação.  <br /></td></tr>
 <tr class="separator:a3d5b2c3616e765d213584778f1050595"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -118,8 +130,8 @@ std::string&#160;</td><td class="memItemRight" valign="bottom"><b>content</b></t
 <a name="details" id="details"></a><h2 class="groupheader">Descrição detalhada</h2>
 <div class="textblock"><p>Classe que representa uma mensagem. </p>
 </div><h2 class="groupheader">Construtores e Destrutores</h2>
-<a id="af306cbad1859806581794e551a24cbd5" name="af306cbad1859806581794e551a24cbd5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af306cbad1859806581794e551a24cbd5">&#9670;&#160;</a></span>Message()</h2>
+<a id="a4fc4f717b634e66070366cb7722d7761" name="a4fc4f717b634e66070366cb7722d7761"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4fc4f717b634e66070366cb7722d7761">&#9670;&#160;</a></span>Message()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -127,25 +139,8 @@ std::string&#160;</td><td class="memItemRight" valign="bottom"><b>content</b></t
         <tr>
           <td class="memname">Message::Message </td>
           <td>(</td>
-          <td class="paramtype">std::string&#160;</td>
-          <td class="paramname"><em>sentAt</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
+          <td class="paramname"></td><td>)</td>
           <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>sentBy</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">std::string&#160;</td>
-          <td class="paramname"><em>content</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">

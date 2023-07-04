@@ -1,20 +1,26 @@
 \doxysection{Voice\+Channel.\+h}
 \hypertarget{VoiceChannel_8h_source}{}\label{VoiceChannel_8h_source}\index{include/VoiceChannel.h@{include/VoiceChannel.h}}
-
+\mbox{\hyperlink{VoiceChannel_8h}{Ir para a documentação desse arquivo.}}
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00001\ \textcolor{comment}{//\ \#include\ <iostream>}}
-\DoxyCodeLine{00002\ \textcolor{comment}{//\ \#include\ <string>}}
-\DoxyCodeLine{00003\ \textcolor{comment}{//\ \#include\ "{}Channel.cpp"{}}}
-\DoxyCodeLine{00004\ \textcolor{comment}{//\ \#include\ "{}Message.cpp"{}}}
-\DoxyCodeLine{00005\ }
-\DoxyCodeLine{00006\ \textcolor{comment}{//\ class\ VoiceChannel\ :\ protected\ Channel}}
-\DoxyCodeLine{00007\ \textcolor{comment}{//\ \{}}
-\DoxyCodeLine{00008\ \textcolor{comment}{//\ \ \ \ \ private:}}
-\DoxyCodeLine{00009\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ Message\ last\_message;}}
-\DoxyCodeLine{00010\ \textcolor{comment}{//\ \ \ \ \ public:}}
-\DoxyCodeLine{00011\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ VoiceChannel(std::string\ name);}}
-\DoxyCodeLine{00012\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ Message\ getLastMessage();}}
-\DoxyCodeLine{00013\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ void\ send(Message\ message);}}
-\DoxyCodeLine{00014\ \textcolor{comment}{//\ \};}}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#ifndef\ VOICECHANNEL\_H}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#define\ VOICECHANNEL\_H}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{Channel_8h}{Channel.h}}"{}}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{Message_8h}{Message.h}}"{}}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classVoiceChannel}{VoiceChannel}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classChannel}{Channel}}}
+\DoxyCodeLine{00015\ \{}
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classMessage}{Message}}\ \mbox{\hyperlink{classVoiceChannel_a79575b051cc9ad568b47d7350d1bb433}{last\_message}};\ }
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classVoiceChannel}{VoiceChannel}}(std::string\ \mbox{\hyperlink{classChannel_ae080e1afd52f3b70e04c62fea46447aa}{name}});\ }
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classMessage}{Message}}\ \mbox{\hyperlink{classVoiceChannel_a4a73fc9d98e0c578a862a3f01f1de3d4}{getLastMessage}}();\ }
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classVoiceChannel_a18846c80f7df76ea3cdc4cb23842996d}{send}}(std::string\ message,\ \textcolor{keywordtype}{int}\ logged\_user\_id);\ }
+\DoxyCodeLine{00022\ \};}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \textcolor{preprocessor}{\#endif}}
 
 \end{DoxyCode}

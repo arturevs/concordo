@@ -105,9 +105,12 @@ Membros Públicos</h2></td></tr>
 <tr class="memitem:a3422b6caa355ce0e693da77b6fe7ffec"><td class="memItemLeft" align="right" valign="top">std::vector&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classServer.html#a3422b6caa355ce0e693da77b6fe7ffec">getMembers</a> ()</td></tr>
 <tr class="memdesc:a3422b6caa355ce0e693da77b6fe7ffec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Método que retorna os ids dos membros do servidor.  <br /></td></tr>
 <tr class="separator:a3422b6caa355ce0e693da77b6fe7ffec"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4ba6abd3d6bc8bd2078594d032c0c490"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="classChannel.html">Channel</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classServer.html#a4ba6abd3d6bc8bd2078594d032c0c490">getChannels</a> ()</td></tr>
-<tr class="memdesc:a4ba6abd3d6bc8bd2078594d032c0c490"><td class="mdescLeft">&#160;</td><td class="mdescRight">Método que retorna os canais do servidor.  <br /></td></tr>
-<tr class="separator:a4ba6abd3d6bc8bd2078594d032c0c490"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa2c056202ecb7983f6857adb7bdbe7a8"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="classChannel.html">Channel</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classServer.html#aa2c056202ecb7983f6857adb7bdbe7a8">getVoiceChannels</a> ()</td></tr>
+<tr class="memdesc:aa2c056202ecb7983f6857adb7bdbe7a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Método que retorna os canais do servidor.  <br /></td></tr>
+<tr class="separator:aa2c056202ecb7983f6857adb7bdbe7a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae3e718390be5251a9bcf8f41bf0489b9"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="classChannel.html">Channel</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classServer.html#ae3e718390be5251a9bcf8f41bf0489b9">getTextChannels</a> ()</td></tr>
+<tr class="memdesc:ae3e718390be5251a9bcf8f41bf0489b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Método que retorna os canais do servidor.  <br /></td></tr>
+<tr class="separator:ae3e718390be5251a9bcf8f41bf0489b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a99dae402344206179c294cb99dfadea5"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classServer.html#a99dae402344206179c294cb99dfadea5">getInviteCodeEnabled</a> ()</td></tr>
 <tr class="memdesc:a99dae402344206179c294cb99dfadea5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Método que retorna se o código de convite está habilitado.  <br /></td></tr>
 <tr class="separator:a99dae402344206179c294cb99dfadea5"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -132,6 +135,18 @@ Membros Públicos</h2></td></tr>
 <tr class="memitem:a521f09e66635eb0305bc46dd6b5d13ab"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classServer.html#a521f09e66635eb0305bc46dd6b5d13ab">listMembers</a> ()</td></tr>
 <tr class="memdesc:a521f09e66635eb0305bc46dd6b5d13ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Método que lista os membros do servidor.  <br /></td></tr>
 <tr class="separator:a521f09e66635eb0305bc46dd6b5d13ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a991d17f54f7d6a29d1f26f8e23987b8f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classServer.html#a991d17f54f7d6a29d1f26f8e23987b8f">memberExists</a> (int id)</td></tr>
+<tr class="memdesc:a991d17f54f7d6a29d1f26f8e23987b8f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Método que verifica se um membro existe no servidor.  <br /></td></tr>
+<tr class="separator:a991d17f54f7d6a29d1f26f8e23987b8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0e9c83ecbb30ca3300b1098040eba56d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classServer.html#a0e9c83ecbb30ca3300b1098040eba56d">create_channel</a> (std::string <a class="el" href="classServer.html#a00cdc9361abb18a279ac64dde9488484">name</a>, std::string type)</td></tr>
+<tr class="memdesc:a0e9c83ecbb30ca3300b1098040eba56d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Método que adiciona um canal ao servidor.  <br /></td></tr>
+<tr class="separator:a0e9c83ecbb30ca3300b1098040eba56d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4994b818a18c0773cdbb4ac4911f5d8a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classServer.html#a4994b818a18c0773cdbb4ac4911f5d8a">list_channels</a> ()</td></tr>
+<tr class="memdesc:a4994b818a18c0773cdbb4ac4911f5d8a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Método que lista os canais do servidor.  <br /></td></tr>
+<tr class="separator:a4994b818a18c0773cdbb4ac4911f5d8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5652f777c63169732a7644acf81253c7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classChannel.html">Channel</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classServer.html#a5652f777c63169732a7644acf81253c7">find_channel</a> (std::string <a class="el" href="classServer.html#a00cdc9361abb18a279ac64dde9488484">name</a>)</td></tr>
+<tr class="memdesc:a5652f777c63169732a7644acf81253c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Método que encontra um canal do servidor.  <br /></td></tr>
+<tr class="separator:a5652f777c63169732a7644acf81253c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
 Atributos Protegidos</h2></td></tr>
@@ -159,10 +174,14 @@ std::string&#160;</td><td class="memItemRight" valign="bottom"><b>invite_code</b
 std::vector&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>members</b></td></tr>
 <tr class="memdesc:ac4fb1d9fbf7cfe948ff83da9461d8978"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vetor que guarda os ids dos membros do servidor. <br /></td></tr>
 <tr class="separator:ac4fb1d9fbf7cfe948ff83da9461d8978"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6839fba5778c0fa37e6b515cf504ec11"><td class="memItemLeft" align="right" valign="top"><a id="a6839fba5778c0fa37e6b515cf504ec11" name="a6839fba5778c0fa37e6b515cf504ec11"></a>
-std::vector&lt; <a class="el" href="classChannel.html">Channel</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>channels</b></td></tr>
-<tr class="memdesc:a6839fba5778c0fa37e6b515cf504ec11"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vetor que guarda os canais do servidor. <br /></td></tr>
-<tr class="separator:a6839fba5778c0fa37e6b515cf504ec11"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0a04033a40939abdc3bae580c08e4110"><td class="memItemLeft" align="right" valign="top"><a id="a0a04033a40939abdc3bae580c08e4110" name="a0a04033a40939abdc3bae580c08e4110"></a>
+std::vector&lt; <a class="el" href="classChannel.html">Channel</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>voice_channels</b></td></tr>
+<tr class="memdesc:a0a04033a40939abdc3bae580c08e4110"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vetor que guarda os canais do servidor. <br /></td></tr>
+<tr class="separator:a0a04033a40939abdc3bae580c08e4110"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ade11c79c980f30304f33226cee1c6532"><td class="memItemLeft" align="right" valign="top"><a id="ade11c79c980f30304f33226cee1c6532" name="ade11c79c980f30304f33226cee1c6532"></a>
+std::vector&lt; <a class="el" href="classChannel.html">Channel</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>text_channels</b></td></tr>
+<tr class="memdesc:ade11c79c980f30304f33226cee1c6532"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vetor que guarda os canais do servidor. <br /></td></tr>
+<tr class="separator:ade11c79c980f30304f33226cee1c6532"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Descrição detalhada</h2>
 <div class="textblock"><p>Classe que representa um servidor. </p>
@@ -222,24 +241,68 @@ std::vector&lt; <a class="el" href="classChannel.html">Channel</a> * &gt;&#160;<
 
 </div>
 </div>
-<a id="a4ba6abd3d6bc8bd2078594d032c0c490" name="a4ba6abd3d6bc8bd2078594d032c0c490"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4ba6abd3d6bc8bd2078594d032c0c490">&#9670;&#160;</a></span>getChannels()</h2>
+<a id="a0e9c83ecbb30ca3300b1098040eba56d" name="a0e9c83ecbb30ca3300b1098040eba56d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0e9c83ecbb30ca3300b1098040eba56d">&#9670;&#160;</a></span>create_channel()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">std::vector&lt; <a class="el" href="classChannel.html">Channel</a> * &gt; Server::getChannels </td>
+          <td class="memname">void Server::create_channel </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>type</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Método que adiciona um canal ao servidor. </p>
+<p>Adiciona um channel ao servidor.</p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">channel</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a5652f777c63169732a7644acf81253c7" name="a5652f777c63169732a7644acf81253c7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5652f777c63169732a7644acf81253c7">&#9670;&#160;</a></span>find_channel()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classChannel.html">Channel</a> * Server::find_channel </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>name</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Método que retorna os canais do servidor. </p>
-<p>Retorna os channels do servidor.</p>
-<dl class="section return"><dt>Retorna</dt><dd>std::vector&lt;Channel *&gt; </dd></dl>
+<p>Método que encontra um canal do servidor. </p>
+<p>Verifica se um channel existe no servidor.</p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>Channel* </dd></dl>
 
 </div>
 </div>
@@ -371,6 +434,68 @@ false </dd></dl>
 
 </div>
 </div>
+<a id="ae3e718390be5251a9bcf8f41bf0489b9" name="ae3e718390be5251a9bcf8f41bf0489b9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae3e718390be5251a9bcf8f41bf0489b9">&#9670;&#160;</a></span>getTextChannels()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt; <a class="el" href="classChannel.html">Channel</a> * &gt; Server::getTextChannels </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Método que retorna os canais do servidor. </p>
+<p>Retorna os text channels do servidor.</p>
+<dl class="section return"><dt>Retorna</dt><dd>std::vector&lt;TextChannel *&gt; </dd></dl>
+
+</div>
+</div>
+<a id="aa2c056202ecb7983f6857adb7bdbe7a8" name="aa2c056202ecb7983f6857adb7bdbe7a8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa2c056202ecb7983f6857adb7bdbe7a8">&#9670;&#160;</a></span>getVoiceChannels()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt; <a class="el" href="classChannel.html">Channel</a> * &gt; Server::getVoiceChannels </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Método que retorna os canais do servidor. </p>
+<p>Retorna voice channels do servidor.</p>
+<dl class="section return"><dt>Retorna</dt><dd>std::vector&lt;VoiceChannel *&gt; </dd></dl>
+
+</div>
+</div>
+<a id="a4994b818a18c0773cdbb4ac4911f5d8a" name="a4994b818a18c0773cdbb4ac4911f5d8a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4994b818a18c0773cdbb4ac4911f5d8a">&#9670;&#160;</a></span>list_channels()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Server::list_channels </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Método que lista os canais do servidor. </p>
+<p>Lista os channels do servidor.</p>
+
+</div>
+</div>
 <a id="a521f09e66635eb0305bc46dd6b5d13ab" name="a521f09e66635eb0305bc46dd6b5d13ab"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a521f09e66635eb0305bc46dd6b5d13ab">&#9670;&#160;</a></span>listMembers()</h2>
 
@@ -388,6 +513,36 @@ false </dd></dl>
 
 <p>Método que lista os membros do servidor. </p>
 <p>Lista os membros do servidor.</p>
+
+</div>
+</div>
+<a id="a991d17f54f7d6a29d1f26f8e23987b8f" name="a991d17f54f7d6a29d1f26f8e23987b8f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a991d17f54f7d6a29d1f26f8e23987b8f">&#9670;&#160;</a></span>memberExists()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Server::memberExists </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>id</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Método que verifica se um membro existe no servidor. </p>
+<p>Verifica se um membro existe no servidor.</p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">id</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>true </dd>
+<dd>
+false </dd></dl>
 
 </div>
 </div>

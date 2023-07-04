@@ -47,6 +47,7 @@ class System
         void join_server(std::string name, std::string invite_code); //!< Método que adiciona o usuário em um servidor.
         void enter_server(std::string name); //!< Método que entra em um servidor.
         void leave_server(); //!< Método que sai de um servidor.
+        void enter_channel(std::string name); //!< Método que entra em um canal.
 };
 
 #endif

@@ -8,14 +8,17 @@
 #include "Message.h"
 #include <ctime>
 
+/**
+ * @brief Classe que representa um canal de texto
+ * 
+ */
 class TextChannel : public Channel
 {
     private:
-        Message last_message;
-        std::vector<Message> messages;
+        std::vector<Message> messages; //!< Vetor que guarda todas as mensagens enviadas no canal.
     public:
-        TextChannel(std::string name);
-        void send(std::string message, int logged_user_id);
+        TextChannel(std::string name); //!< Construtor da classe TextChannel.
+        void send(std::string message, int logged_user_id); //!< Método que envia uma mensagem no canal.
 };
 
 #endif

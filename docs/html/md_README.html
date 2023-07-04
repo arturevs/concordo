@@ -72,7 +72,60 @@ $(function() {
   <div class="headertitle"><div class="title">README</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p>Yes this is a README </p>
+<div class="textblock"><p><b>Esse é o projeto Concordo da disciplina Linguagem de Programação 1 ministrada pelo professor Sidemar na UFRN para o curso de BTI.</b></p>
+<p>Autor: <em>Artur Revorêdo Pinto</em></p>
+<p>Horário da turma: <em>M56</em></p>
+<p><b>Para compilar o código basta rodar os seguintes comandos</b></p>
+<ul>
+<li>cmake -B build</li>
+<li>cmake &ndash;build build</li>
+</ul>
+<p><b>Para rodar o programa basta utilizar o comando</b></p>
+<ul>
+<li>./build/concordo</li>
+</ul>
+<p>Nesse projeto existem alguns comandos possíveis, caso você não esteja logado os comandos são:</p>
+<ul>
+<li><p class="startli">create-user email senha nome</p>
+<p class="startli">Nesse comando email nem senha podem conter espaços, o nome no entanto pode.</p>
+</li>
+<li><p class="startli">login email senha</p>
+<p class="startli">Entra com um usuário no sistema.</p>
+</li>
+<li><p class="startli">quit</p>
+<p class="startli">Sai do programa.</p>
+</li>
+</ul>
+<p>Caso o login seja efetuado então outros comandos ficarão disponíveis para o usuário, esses são.</p>
+<ul>
+<li><p class="startli">disconnect</p>
+<p class="startli">Desconecta o usuário atual do sistema.</p>
+</li>
+<li><p class="startli">create-server nome</p>
+<p class="startli">Em que nome é o nome do servidor.</p>
+</li>
+<li><p class="startli">set-server-desc nome descrição</p>
+<p class="startli">Nesse o nome é o nome do servidor e descrição é a descrição que você deseja inserir no servidor.</p>
+</li>
+<li><p class="startli">set-server-invite-code nome invite-code</p>
+<p class="startli">Nesse o nome é o nome do servidor o qual o invite code será mudado e invite code é um código sem espaços para ser inserido no servidor</p>
+</li>
+<li><p class="startli">list-servers</p>
+<p class="startli">Apenas lista os servidores existentes</p>
+</li>
+<li><p class="startli">remove-server</p>
+<p class="startli">Deleta um servidor do sistema.</p>
+</li>
+<li><p class="startli">join-server nome invite code</p>
+<p class="startli">Nesse o usuário tentará ser adicionado no servidor de nome "nome" e digitará o código de convite.</p>
+</li>
+<li><p class="startli">enter-server nome</p>
+<p class="startli">Nesse o usuário entra em um servidor do qual já é membro.</p>
+</li>
+<li><p class="startli">leave-server</p>
+<p class="startli">Nesse o usuário sai do servidor, não deixando de ser um participante mas apenas para navegar por outros servidores. </p>
+</li>
+</ul>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
 <!-- start footer part -->

@@ -76,20 +76,35 @@ $(function() {
   <div class="headertitle"><div class="title">VoiceChannel.h</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">// #include &lt;iostream&gt;</span></div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment">// #include &lt;string&gt;</span></div>
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">// #include &quot;Channel.cpp&quot;</span></div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment">// #include &quot;Message.cpp&quot;</span></div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment">// class VoiceChannel : protected Channel</span></div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment">// {</span></div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment">//     private:</span></div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="comment">//         Message last_message;</span></div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="comment">//     public:</span></div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="comment">//         VoiceChannel(std::string name);</span></div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="comment">//         Message getLastMessage();</span></div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="comment">//         void send(Message message);</span></div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="comment">// };</span></div>
+<a href="VoiceChannel_8h.html">Ir para a documentação desse arquivo.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#ifndef VOICECHANNEL_H</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#define VOICECHANNEL_H</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &quot;<a class="code" href="Channel_8h.html">Channel.h</a>&quot;</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &quot;<a class="code" href="Message_8h.html">Message.h</a>&quot;</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="classVoiceChannel.html">   14</a></span><span class="keyword">class </span><a class="code hl_class" href="classVoiceChannel.html">VoiceChannel</a> : <span class="keyword">public</span> <a class="code hl_class" href="classChannel.html">Channel</a></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>{</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="classVoiceChannel.html#a79575b051cc9ad568b47d7350d1bb433">   17</a></span>        <a class="code hl_class" href="classMessage.html">Message</a> <a class="code hl_variable" href="classVoiceChannel.html#a79575b051cc9ad568b47d7350d1bb433">last_message</a>; </div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>        <a class="code hl_class" href="classVoiceChannel.html">VoiceChannel</a>(std::string <a class="code hl_variable" href="classChannel.html#ae080e1afd52f3b70e04c62fea46447aa">name</a>); </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>        <a class="code hl_class" href="classMessage.html">Message</a> <a class="code hl_function" href="classVoiceChannel.html#a4a73fc9d98e0c578a862a3f01f1de3d4">getLastMessage</a>(); </div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="classVoiceChannel.html#a18846c80f7df76ea3cdc4cb23842996d">send</a>(std::string message, <span class="keywordtype">int</span> logged_user_id); </div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>};</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="aChannel_8h_html"><div class="ttname"><a href="Channel_8h.html">Channel.h</a></div><div class="ttdoc">Definição da classe Channel.</div></div>
+<div class="ttc" id="aMessage_8h_html"><div class="ttname"><a href="Message_8h.html">Message.h</a></div><div class="ttdoc">Definição da classe Message.</div></div>
+<div class="ttc" id="aclassChannel_html"><div class="ttname"><a href="classChannel.html">Channel</a></div><div class="ttdoc">Classe que representa um canal.</div><div class="ttdef"><b>Definition</b> Channel.h:17</div></div>
+<div class="ttc" id="aclassChannel_html_ae080e1afd52f3b70e04c62fea46447aa"><div class="ttname"><a href="classChannel.html#ae080e1afd52f3b70e04c62fea46447aa">Channel::name</a></div><div class="ttdeci">std::string name</div><div class="ttdoc">Variável que guarda o nome do canal.</div><div class="ttdef"><b>Definition</b> Channel.h:19</div></div>
+<div class="ttc" id="aclassMessage_html"><div class="ttname"><a href="classMessage.html">Message</a></div><div class="ttdoc">Classe que representa uma mensagem.</div><div class="ttdef"><b>Definition</b> Message.h:16</div></div>
+<div class="ttc" id="aclassVoiceChannel_html"><div class="ttname"><a href="classVoiceChannel.html">VoiceChannel</a></div><div class="ttdef"><b>Definition</b> VoiceChannel.h:15</div></div>
+<div class="ttc" id="aclassVoiceChannel_html_a18846c80f7df76ea3cdc4cb23842996d"><div class="ttname"><a href="classVoiceChannel.html#a18846c80f7df76ea3cdc4cb23842996d">VoiceChannel::send</a></div><div class="ttdeci">void send(std::string message, int logged_user_id)</div><div class="ttdoc">Método que envia uma mensagem no canal.</div><div class="ttdef"><b>Definition</b> VoiceChannel.cpp:37</div></div>
+<div class="ttc" id="aclassVoiceChannel_html_a4a73fc9d98e0c578a862a3f01f1de3d4"><div class="ttname"><a href="classVoiceChannel.html#a4a73fc9d98e0c578a862a3f01f1de3d4">VoiceChannel::getLastMessage</a></div><div class="ttdeci">Message getLastMessage()</div><div class="ttdoc">Método que retorna a última mensagem enviada no canal.</div><div class="ttdef"><b>Definition</b> VoiceChannel.cpp:29</div></div>
+<div class="ttc" id="aclassVoiceChannel_html_a79575b051cc9ad568b47d7350d1bb433"><div class="ttname"><a href="classVoiceChannel.html#a79575b051cc9ad568b47d7350d1bb433">VoiceChannel::last_message</a></div><div class="ttdeci">Message last_message</div><div class="ttdoc">Variável que guarda a última mensagem enviada no canal.</div><div class="ttdef"><b>Definition</b> VoiceChannel.h:17</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

@@ -1,3 +1,70 @@
 \chapter{README}
 \hypertarget{md_README}{}\label{md_README}\index{README@{README}}
-Yes this is a README 
+{\bfseries{Esse é o projeto Concordo da disciplina Linguagem de Programação 1 ministrada pelo professor Sidemar na UFRN para o curso de BTI.}}
+
+Autor\+: {\itshape Artur Revorêdo Pinto}
+
+Horário da turma\+: {\itshape M56}
+
+{\bfseries{Para compilar o código basta rodar os seguintes comandos}}
+
+
+\begin{DoxyItemize}
+\item cmake -\/B build
+\item cmake --build build
+\end{DoxyItemize}
+
+{\bfseries{Para rodar o programa basta utilizar o comando}}
+
+
+\begin{DoxyItemize}
+\item ./build/concordo
+\end{DoxyItemize}
+
+Nesse projeto existem alguns comandos possíveis, caso você não esteja logado os comandos são\+:
+
+
+\begin{DoxyItemize}
+\item create-\/user email senha nome
+
+Nesse comando email nem senha podem conter espaços, o nome no entanto pode.
+\item login email senha
+
+Entra com um usuário no sistema.
+\item quit
+
+Sai do programa.
+\end{DoxyItemize}
+
+Caso o login seja efetuado então outros comandos ficarão disponíveis para o usuário, esses são.
+
+
+\begin{DoxyItemize}
+\item disconnect
+
+Desconecta o usuário atual do sistema.
+\item create-\/server nome
+
+Em que nome é o nome do servidor.
+\item set-\/server-\/desc nome descrição
+
+Nesse o nome é o nome do servidor e descrição é a descrição que você deseja inserir no servidor.
+\item set-\/server-\/invite-\/code nome invite-\/code
+
+Nesse o nome é o nome do servidor o qual o invite code será mudado e invite code é um código sem espaços para ser inserido no servidor
+\item list-\/servers
+
+Apenas lista os servidores existentes
+\item remove-\/server
+
+Deleta um servidor do sistema.
+\item join-\/server nome invite code
+
+Nesse o usuário tentará ser adicionado no servidor de nome \"{}nome\"{} e digitará o código de convite.
+\item enter-\/server nome
+
+Nesse o usuário entra em um servidor do qual já é membro.
+\item leave-\/server
+
+Nesse o usuário sai do servidor, não deixando de ser um participante mas apenas para navegar por outros servidores. 
+\end{DoxyItemize}

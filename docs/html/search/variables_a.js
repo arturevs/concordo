@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['users_0',['users',['../classSystem.html#a4959741b784cdd8ca47fea88f9ac322a',1,'System']]]
+  ['text_5fchannels_0',['text_channels',['../classServer.html#ade11c79c980f30304f33226cee1c6532',1,'Server']]]
 ];

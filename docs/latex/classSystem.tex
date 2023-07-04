@@ -45,7 +45,9 @@ void \mbox{\hyperlink{classSystem_a9a58f0bfdd1dcbc95463ad5ed74d59eb}{join\+\_\+s
 void \mbox{\hyperlink{classSystem_a4b48d1dd934820e7140445d705c08e27}{enter\+\_\+server}} (std\+::string name)
 \begin{DoxyCompactList}\small\item\em Método que entra em um servidor. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classSystem_a6fb9f04c442be1d9f598428f30ccd666}{leave\+\_\+server}} ()
-\begin{DoxyCompactList}\small\item\em Método que sai de um servidor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Método que sai de um servidor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classSystem_ac9fa73afbf96c8597ccd746846cc354f}{enter\+\_\+channel}} (std\+::string name)
+\begin{DoxyCompactList}\small\item\em Método que entra em um canal. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Atributos Privados}
 \begin{DoxyCompactItemize}
 \item 
@@ -131,7 +133,17 @@ Cria o usuário e o adiciona na lista de usuários do sistema.\Hypertarget{class
 
 Método que faz o logout de um usuário. 
 
-Desconecta o usuário logado.\Hypertarget{classSystem_a4b48d1dd934820e7140445d705c08e27}\label{classSystem_a4b48d1dd934820e7140445d705c08e27} 
+Desconecta o usuário logado.\Hypertarget{classSystem_ac9fa73afbf96c8597ccd746846cc354f}\label{classSystem_ac9fa73afbf96c8597ccd746846cc354f} 
+\index{System@{System}!enter\_channel@{enter\_channel}}
+\index{enter\_channel@{enter\_channel}!System@{System}}
+\doxysubsubsection{\texorpdfstring{enter\_channel()}{enter\_channel()}}
+{\footnotesize\ttfamily void System\+::enter\+\_\+channel (\begin{DoxyParamCaption}\item[{std\+::string}]{name }\end{DoxyParamCaption})}
+
+
+
+Método que entra em um canal. 
+
+entra em um canal do servidor atual\Hypertarget{classSystem_a4b48d1dd934820e7140445d705c08e27}\label{classSystem_a4b48d1dd934820e7140445d705c08e27} 
 \index{System@{System}!enter\_server@{enter\_server}}
 \index{enter\_server@{enter\_server}!System@{System}}
 \doxysubsubsection{\texorpdfstring{enter\_server()}{enter\_server()}}

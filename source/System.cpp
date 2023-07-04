@@ -339,6 +339,28 @@ void System::leave_server()
     std::cout << "You left the server" << '\n';
 }
 
+/**
+ * @brief entra em um canal do servidor atual
+ * 
+ */
+void System::enter_channel(std::string name)
+{
+    Channel*  x = current_server->find_channel(name);
+    if(x == nullptr)
+    {
+        std::cout << "Channel not found" << '\n';
+        return;
+    }
+    else
+    {
+        current_channel = x;
+        std::cout << "Channel " << name << " selected successfully" << '\n';
+        return;
+    }
+}
+
+
+
 //================================================================================
 
 /**
@@ -419,9 +441,28 @@ void System::executable()
             {
                 leave_server();
             }
-            else if(command == "logged-user")
+            else if(command == "list-channels" && LOGGED && current_server != nullptr)
             {
-                std::cout << "Logged user: " << logged_user << '\n';
+                current_server->list_channels();
+            }
+            else if(command == "create-channel" && LOGGED && current_server != nullptr)
+            {
+                std::string name, type;
+                std::cin >> name >> type;
+                current_server->create_channel(name, type);
+                std::cout << "Channel created successfully" << '\n';
+            }
+            else if(command == "leave-channel" && LOGGED && current_server != nullptr && current_channel != nullptr)
+            {
+                current_channel = nullptr;
+                std::cout << "left the channel succsessfully" << '\n';
+            }
+            else if(command == "enter-channel" && LOGGED && current_server != nullptr)
+            {
+                //using enter_channel
+                std::string name;
+                std::cin >> name;
+                enter_channel(name);
             }
             else std::cout << "Invalid command" << '\n';
 

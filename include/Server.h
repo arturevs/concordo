@@ -46,7 +46,9 @@ class Server
         void removeMember(int id); //!< Método que remove um membro do servidor.
         void listMembers(); //!< Método que lista os membros do servidor.
         bool memberExists(int id); //!< Método que verifica se um membro existe no servidor.
-        void addChannel(std::string name, std::string type); //!< Método que adiciona um canal ao servidor.
+        void create_channel(std::string name, std::string type); //!< Método que adiciona um canal ao servidor.
+        void list_channels(); //!< Método que lista os canais do servidor.
+        Channel* find_channel(std::string name); //!< Método que encontra um canal do servidor.
 };
 
 #endif

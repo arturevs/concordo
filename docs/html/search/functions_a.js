@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['remove_5fserver_0',['remove_server',['../classSystem.html#a897de87a4634de5e9c16a060abf4faaf',1,'System']]],
-  ['removeinvitecode_1',['removeInviteCode',['../classServer.html#ad2050a9b345d87ebfbb4fd540dafa0ff',1,'Server']]],
-  ['removemember_2',['removeMember',['../classServer.html#a653c2481cd2174d43341ca0c1a7dcae9',1,'Server']]]
+  ['operator_3d_0',['operator=',['../classMessage.html#ad2b9dfa8e9b33a367cdb9a5c8b4bbe87',1,'Message']]],
+  ['operator_3d_3d_1',['operator==',['../classMessage.html#a3d5b2c3616e765d213584778f1050595',1,'Message::operator==()'],['../classUser.html#a02ee94b3502dcd0f7c133144836a7946',1,'User::operator==()']]]
 ];

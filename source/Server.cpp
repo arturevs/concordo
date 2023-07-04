@@ -217,12 +217,12 @@ bool Server::memberExists(int id)
  * 
  * @param channel 
  */
-void Server::addChannel(std::string name, std::string type)
+void Server::create_channel(std::string name, std::string type)
 {
     if(type == "text")
     {
         Channel* canal = new TextChannel(name);
-        
+
         text_channels.push_back(canal);
     }
     else if(type == "voice")
@@ -230,4 +230,46 @@ void Server::addChannel(std::string name, std::string type)
         Channel* canal = new VoiceChannel(name);
         voice_channels.push_back(canal);
     }
+}
+
+/**
+ * @brief Lista os channels do servidor
+ * 
+ */
+void Server::list_channels()
+{
+    std::cout << name << " server channels" << '\n';
+    for (int i = 0; i < text_channels.size(); i++)
+    {
+        std::cout << text_channels[i]->getName() << " text channel" << '\n';
+    }
+    for (int i = 0; i < voice_channels.size(); i++)
+    {
+        std::cout << voice_channels[i]->getName() << " voice channel" << '\n';
+    }
+}
+
+/**
+ * @brief Verifica se um channel existe no servidor
+ * 
+ * @param name 
+ * @return Channel* 
+ */
+Channel* Server::find_channel(std::string name)
+{
+    for (int i = 0; i < text_channels.size(); i++)
+    {
+        if (text_channels[i]->getName() == name)
+        {
+            return text_channels[i];
+        }
+    }
+    for (int i = 0; i < voice_channels.size(); i++)
+    {
+        if (voice_channels[i]->getName() == name)
+        {
+            return voice_channels[i];
+        }
+    }
+    return nullptr;
 }
