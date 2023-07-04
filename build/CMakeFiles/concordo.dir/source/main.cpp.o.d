@@ -332,4 +332,7 @@ CMakeFiles/concordo.dir/source/main.cpp.o: \
  /home/turevs/faculdade/concordo/include/System.h \
  /home/turevs/faculdade/concordo/include/User.h \
  /home/turevs/faculdade/concordo/include/Channel.h \
- /home/turevs/faculdade/concordo/include/Server.h
+ /home/turevs/faculdade/concordo/include/Server.h \
+ /home/turevs/faculdade/concordo/include/VoiceChannel.h \
+ /home/turevs/faculdade/concordo/include/Message.h \
+ /home/turevs/faculdade/concordo/include/TextChannel.h

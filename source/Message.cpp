@@ -71,3 +71,16 @@ Message Message::operator=(const Message &other)
     this->content = other.content;
     return *this;
 }
+
+void Message::setSentAt(std::string sentAt)
+{
+    this->sentAt = sentAt;
+}
+void Message::setSentBy(int sentBy)
+{
+    this->sentBy = sentBy;
+}
+void Message::setContent(std::string content)
+{
+    this->content = content;
+}

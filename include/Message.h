@@ -1,3 +1,6 @@
+#ifndef MESSAGE_H
+#define MESSAGE_H
+
 /**
  * @file Message.h
  * @brief Definição da classe Message
@@ -22,6 +25,11 @@ public:
     std::string getSentAt(); //<! Método que retorna o horário de envio da mensagem.
     int getSentBy();       //<! Método que retorna o id do usuário que enviou a mensagem.
     std::string getContent(); //<! Método que retorna o conteúdo da mensagem.
+    void setSentAt(std::string sentAt); //<! Método que seta o horário de envio da mensagem.
+    void setSentBy(int sentBy);       //<! Método que seta o id do usuário que enviou a mensagem.
+    void setContent(std::string content); //<! Método que seta o conteúdo da mensagem.
     bool operator==(const Message &other); //<! Sobrecarga do operador de comparação.
     Message operator=(const Message &other); //<! Sobrecarga do operador de atribuição.
 };
+
+#endif

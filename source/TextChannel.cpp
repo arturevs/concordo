@@ -1,20 +1,14 @@
 #include <iostream>
 #include <string>
-#include <iomanip>
-#include "VoiceChannel.h"
-#include "Message.h"
+#include "TextChannel.h"
 #include <ctime>
 
-VoiceChannel::VoiceChannel(std::string name = "") : Channel(name)
+TextChannel::TextChannel(std::string name = "") : Channel(name)
 {
     this->name = name;
 }
 
-
-
-Message VoiceChannel::getLastMessage() { return last_message; }
-
-void VoiceChannel::send(std::string message, int logged_user_id)
+void TextChannel::send(std::string message, int logged_user_id)
 {
 
     time_t now = time(0);
@@ -25,5 +19,5 @@ void VoiceChannel::send(std::string message, int logged_user_id)
     msg.setSentBy(logged_user_id);
     msg.setSentAt(time);
     msg.setContent(message);
-    last_message = msg;
+    messages.push_back(msg);
 }

@@ -17,7 +17,6 @@ class Channel
 {
 protected:
     std::string name; //!< Variável que guarda o nome do canal.
-
 public:
     Channel(std::string name); //!< Construtor da classe Channel.
     std::string getName(); //!< Método que retorna o nome do canal.

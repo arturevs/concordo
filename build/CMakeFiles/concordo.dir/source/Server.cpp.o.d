@@ -331,4 +331,10 @@ CMakeFiles/concordo.dir/source/Server.cpp.o: \
  /usr/include/c++/11/bits/uses_allocator_args.h \
  /usr/include/c++/11/variant \
  /home/turevs/faculdade/concordo/include/User.h \
- /home/turevs/faculdade/concordo/include/Channel.h
+ /home/turevs/faculdade/concordo/include/Channel.h \
+ /home/turevs/faculdade/concordo/include/VoiceChannel.h \
+ /home/turevs/faculdade/concordo/include/Message.h \
+ /home/turevs/faculdade/concordo/include/TextChannel.h \
+ /home/turevs/faculdade/concordo/include/Channel.h \
+ /home/turevs/faculdade/concordo/include/VoiceChannel.h \
+ /home/turevs/faculdade/concordo/include/TextChannel.h

@@ -5,6 +5,9 @@
  */
 
 #include "Server.h"
+#include "Channel.h"
+#include "VoiceChannel.h"
+#include "TextChannel.h"
 
 /**
  * @brief Construtor de Server
@@ -22,7 +25,8 @@ Server::Server(std::string name)
  */
 void Server::server_clear()
 {
-    channels.clear();
+    text_channels.clear();
+    voice_channels.clear();
     members.clear();
 }
 
@@ -77,13 +81,23 @@ std::vector<int> Server::getMembers()
 }
 
 /**
- * @brief Retorna os channels do servidor
+ * @brief Retorna voice channels do servidor
  * 
- * @return std::vector<Channel *>
+ * @return std::vector<VoiceChannel *>
  */
-std::vector<Channel *> Server::getChannels()
+std::vector<Channel *> Server::getVoiceChannels()
 {
-    return channels;
+    return voice_channels;
+}
+
+/**
+ * @brief Retorna os text channels do servidor
+ * 
+ * @return std::vector<TextChannel *>
+ */
+std::vector<Channel *> Server::getTextChannels()
+{
+    return text_channels;
 }
 
 /**
@@ -196,4 +210,24 @@ bool Server::memberExists(int id)
         }
     }
     return false;
+}
+
+/**
+ * @brief Adiciona um channel ao servidor
+ * 
+ * @param channel 
+ */
+void Server::addChannel(std::string name, std::string type)
+{
+    if(type == "text")
+    {
+        Channel* canal = new TextChannel(name);
+        
+        text_channels.push_back(canal);
+    }
+    else if(type == "voice")
+    {
+        Channel* canal = new VoiceChannel(name);
+        voice_channels.push_back(canal);
+    }
 }
