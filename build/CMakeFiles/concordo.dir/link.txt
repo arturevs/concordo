@@ -1,1 +1,0 @@
-/usr/bin/c++ CMakeFiles/concordo.dir/source/Channel.cpp.o CMakeFiles/concordo.dir/source/Message.cpp.o CMakeFiles/concordo.dir/source/Server.cpp.o CMakeFiles/concordo.dir/source/System.cpp.o CMakeFiles/concordo.dir/source/User.cpp.o CMakeFiles/concordo.dir/source/VoiceChannel.cpp.o CMakeFiles/concordo.dir/source/main.cpp.o -o concordo 

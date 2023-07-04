@@ -14,7 +14,7 @@ class TextChannel : public Channel
         Message last_message;
         std::vector<Message> messages;
     public:
-        TextChannel(std::string name = "");
+        TextChannel(std::string name);
         void send(std::string message, int logged_user_id);
 };
 
