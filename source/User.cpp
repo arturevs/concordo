@@ -23,6 +23,13 @@ User::User(std::string name, std::string email, std::string password)
     this->email = email;
     this->password = password;
 }
+User::User(int id, std::string name, std::string email, std::string password)
+{
+    this->id = id;
+    this->name = name;
+    this->email = email;
+    this->password = password;
+}
 
 /**
  * @brief Retorna o id do usuário

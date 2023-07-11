@@ -19,6 +19,19 @@ Server::Server(std::string name)
     this->name = name;
 }
 
+Server::Server()
+{
+    this->name = "";
+}
+
+Server::Server(int owner, std::string name, std::string description, std::string invite_code)
+{
+    this->owner_id = owner;
+    this->name = name;
+    this->description = description;
+    this->invite_code = invite_code;
+}
+
 /**
  * @brief Limpa o servidor de channels e members
  * 
@@ -85,7 +98,7 @@ std::vector<int> Server::getMembers()
  * 
  * @return std::vector<VoiceChannel *>
  */
-std::vector<Channel *> Server::getVoiceChannels()
+std::vector<VoiceChannel> Server::getVoiceChannels()
 {
     return voice_channels;
 }
@@ -95,7 +108,7 @@ std::vector<Channel *> Server::getVoiceChannels()
  * 
  * @return std::vector<TextChannel *>
  */
-std::vector<Channel *> Server::getTextChannels()
+std::vector<TextChannel> Server::getTextChannels()
 {
     return text_channels;
 }
@@ -221,13 +234,13 @@ void Server::create_channel(std::string name, std::string type)
 {
     if(type == "text")
     {
-        Channel* canal = new TextChannel(name);
+        TextChannel canal = TextChannel(name);
 
         text_channels.push_back(canal);
     }
     else if(type == "voice")
     {
-        Channel* canal = new VoiceChannel(name);
+        VoiceChannel canal = VoiceChannel(name);
         voice_channels.push_back(canal);
     }
 }
@@ -241,11 +254,11 @@ void Server::list_channels()
     std::cout << name << " server channels" << '\n';
     for (int i = 0; i < text_channels.size(); i++)
     {
-        std::cout << text_channels[i]->getName() << " text channel" << '\n';
+        std::cout << text_channels[i].getName() << " text channel" << '\n';
     }
     for (int i = 0; i < voice_channels.size(); i++)
     {
-        std::cout << voice_channels[i]->getName() << " voice channel" << '\n';
+        std::cout << voice_channels[i].getName() << " voice channel" << '\n';
     }
 }
 
@@ -255,21 +268,41 @@ void Server::list_channels()
  * @param name 
  * @return Channel* 
  */
-Channel* Server::find_channel(std::string name)
+bool Server::find_channel(std::string name)
 {
     for (int i = 0; i < text_channels.size(); i++)
     {
-        if (text_channels[i]->getName() == name)
+        if (text_channels[i].getName() == name)
         {
-            return text_channels[i];
+            true;
         }
     }
     for (int i = 0; i < voice_channels.size(); i++)
     {
-        if (voice_channels[i]->getName() == name)
+        if (voice_channels[i].getName() == name)
         {
-            return voice_channels[i];
+            return true;
         }
     }
-    return nullptr;
+    return false;
+}
+
+/**
+ * @brief Adiciona um channel ao servidor
+ * 
+ * @param channel 
+ */
+void Server::add_TextChannel(TextChannel channel)
+{
+    text_channels.push_back(channel);
+}
+
+/**
+ * @brief Adiciona um channel ao servidor
+ * 
+ * @param channel 
+ */
+void Server::add_VoiceChannel(VoiceChannel channel)
+{
+    voice_channels.push_back(channel);
 }

@@ -11,17 +11,18 @@
 \DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{Channel_8h}{Channel.h}}"{}}}
 \DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{Message_8h}{Message.h}}"{}}}
 \DoxyCodeLine{00013\ }
-\DoxyCodeLine{00014\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classVoiceChannel}{VoiceChannel}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classChannel}{Channel}}}
-\DoxyCodeLine{00015\ \{}
-\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keyword}{private}:}
-\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classMessage}{Message}}\ \mbox{\hyperlink{classVoiceChannel_a79575b051cc9ad568b47d7350d1bb433}{last\_message}};\ }
-\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classVoiceChannel}{VoiceChannel}}(std::string\ \mbox{\hyperlink{classChannel_ae080e1afd52f3b70e04c62fea46447aa}{name}});\ }
-\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classMessage}{Message}}\ \mbox{\hyperlink{classVoiceChannel_a4a73fc9d98e0c578a862a3f01f1de3d4}{getLastMessage}}();\ }
-\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classVoiceChannel_a18846c80f7df76ea3cdc4cb23842996d}{send}}(std::string\ message,\ \textcolor{keywordtype}{int}\ logged\_user\_id);\ }
-\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ list\_messages();}
-\DoxyCodeLine{00023\ \};}
-\DoxyCodeLine{00024\ }
-\DoxyCodeLine{00025\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00018\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classVoiceChannel}{VoiceChannel}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classChannel}{Channel}}}
+\DoxyCodeLine{00019\ \{}
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classMessage}{Message}}\ \mbox{\hyperlink{classVoiceChannel_a79575b051cc9ad568b47d7350d1bb433}{last\_message}};\ }
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classVoiceChannel}{VoiceChannel}}(std::string\ \mbox{\hyperlink{classChannel_ae080e1afd52f3b70e04c62fea46447aa}{name}});\ }
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classMessage}{Message}}\ \mbox{\hyperlink{classVoiceChannel_a4a73fc9d98e0c578a862a3f01f1de3d4}{getLastMessage}}();\ }
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classVoiceChannel_a18846c80f7df76ea3cdc4cb23842996d}{send}}(std::string\ message,\ \textcolor{keywordtype}{int}\ logged\_user\_id);\ }
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classVoiceChannel_a01a6f711c7e970c316da01e5530fe158}{list\_messages}}();}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classVoiceChannel_ac690daf424123acac63987548440ab05}{add\_message}}(\mbox{\hyperlink{classMessage}{Message}}\ message);}
+\DoxyCodeLine{00028\ \};}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \textcolor{preprocessor}{\#endif}}
 
 \end{DoxyCode}

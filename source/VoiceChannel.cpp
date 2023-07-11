@@ -48,7 +48,21 @@ void VoiceChannel::send(std::string message, int logged_user_id)
     last_message = msg;
 }
 
+/**
+ * @brief Lista a última mensagem enviada no canal
+ * 
+ */
 void VoiceChannel::list_messages()
 {
     std::cout << last_message.getSentBy() << " " << last_message.getSentAt() << " " << last_message.getContent() << std::endl;
+}
+
+/**
+ * @brief Adiciona uma mensagem ao canal
+ * 
+ * @param message 
+ */
+void VoiceChannel::add_message(Message message)
+{
+    last_message = message;
 }

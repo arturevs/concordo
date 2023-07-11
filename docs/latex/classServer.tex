@@ -12,7 +12,13 @@ Classe que representa um servidor.
 \doxysubsubsection*{Membros Públicos}
 \begin{DoxyCompactItemize}
 \item 
+\Hypertarget{classServer_ad5ec9462b520e59f7ea831e157ee5e59}\label{classServer_ad5ec9462b520e59f7ea831e157ee5e59} 
+{\bfseries Server} ()
+\begin{DoxyCompactList}\small\item\em Construtor da classe \doxylink{classServer}{Server}. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classServer_a6b811b76ea6dfa5b145c2e2c8ce53f99}{Server}} (std\+::string \mbox{\hyperlink{classServer_a00cdc9361abb18a279ac64dde9488484}{name}})
+\begin{DoxyCompactList}\small\item\em Construtor da classe \doxylink{classServer}{Server}. \end{DoxyCompactList}\item 
+\Hypertarget{classServer_a75e6cd464475fd0c8b204445626ea2d7}\label{classServer_a75e6cd464475fd0c8b204445626ea2d7} 
+{\bfseries Server} (int owner, std\+::string \mbox{\hyperlink{classServer_a00cdc9361abb18a279ac64dde9488484}{name}}, std\+::string \mbox{\hyperlink{classServer_ad40126d35fe76136fe3979ac8b95f327}{description}}, std\+::string \mbox{\hyperlink{classServer_ac592be04f014e1ead22a1aee4dc6ce17}{invite\+\_\+code}})
 \begin{DoxyCompactList}\small\item\em Construtor da classe \doxylink{classServer}{Server}. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classServer_a26818189a0bec1183c9e74bcb582a54e}{server\+\_\+clear}} ()
 \begin{DoxyCompactList}\small\item\em Método que limpa o servidor. \end{DoxyCompactList}\item 
@@ -26,9 +32,9 @@ std\+::string \mbox{\hyperlink{classServer_a458dd27eb61f1f422bc08f261cdfeb8c}{ge
 \begin{DoxyCompactList}\small\item\em Método que retorna o código de convite do servidor. \end{DoxyCompactList}\item 
 std\+::vector$<$ int $>$ \mbox{\hyperlink{classServer_a3422b6caa355ce0e693da77b6fe7ffec}{get\+Members}} ()
 \begin{DoxyCompactList}\small\item\em Método que retorna os ids dos membros do servidor. \end{DoxyCompactList}\item 
-std\+::vector$<$ \mbox{\hyperlink{classChannel}{Channel}} \texorpdfstring{$\ast$}{*} $>$ \mbox{\hyperlink{classServer_aa2c056202ecb7983f6857adb7bdbe7a8}{get\+Voice\+Channels}} ()
+std\+::vector$<$ \mbox{\hyperlink{classVoiceChannel}{Voice\+Channel}} $>$ \mbox{\hyperlink{classServer_a8210b82c86092ce6cb70478e273d949b}{get\+Voice\+Channels}} ()
 \begin{DoxyCompactList}\small\item\em Método que retorna os canais do servidor. \end{DoxyCompactList}\item 
-std\+::vector$<$ \mbox{\hyperlink{classChannel}{Channel}} \texorpdfstring{$\ast$}{*} $>$ \mbox{\hyperlink{classServer_ae3e718390be5251a9bcf8f41bf0489b9}{get\+Text\+Channels}} ()
+std\+::vector$<$ \mbox{\hyperlink{classTextChannel}{Text\+Channel}} $>$ \mbox{\hyperlink{classServer_a592c7274def0f2a2031720f3caa5716f}{get\+Text\+Channels}} ()
 \begin{DoxyCompactList}\small\item\em Método que retorna os canais do servidor. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{classServer_a99dae402344206179c294cb99dfadea5}{get\+Invite\+Code\+Enabled}} ()
 \begin{DoxyCompactList}\small\item\em Método que retorna se o código de convite está habilitado. \end{DoxyCompactList}\item 
@@ -52,8 +58,14 @@ void \mbox{\hyperlink{classServer_a0e9c83ecbb30ca3300b1098040eba56d}{create\+\_\
 \begin{DoxyCompactList}\small\item\em Método que adiciona um canal ao servidor. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classServer_a4994b818a18c0773cdbb4ac4911f5d8a}{list\+\_\+channels}} ()
 \begin{DoxyCompactList}\small\item\em Método que lista os canais do servidor. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{classChannel}{Channel}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classServer_a5652f777c63169732a7644acf81253c7}{find\+\_\+channel}} (std\+::string \mbox{\hyperlink{classServer_a00cdc9361abb18a279ac64dde9488484}{name}})
-\begin{DoxyCompactList}\small\item\em Método que encontra um canal do servidor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+bool \mbox{\hyperlink{classServer_ad31a5f11b76ff6ced52937e478757bff}{find\+\_\+channel}} (std\+::string \mbox{\hyperlink{classServer_a00cdc9361abb18a279ac64dde9488484}{name}})
+\begin{DoxyCompactList}\small\item\em Método que encontra um canal do servidor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classServer_a41dfe27464492780bda63734675a2d3f}{add\+\_\+\+Text\+Channel}} (\mbox{\hyperlink{classTextChannel}{Text\+Channel}} channel)
+\begin{DoxyCompactList}\small\item\em Método que adiciona um canal de texto ao servidor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classServer_a6793c81d416427708fb331f7553a7dd2}{add\+\_\+\+Voice\+Channel}} (\mbox{\hyperlink{classVoiceChannel}{Voice\+Channel}} channel)
+\begin{DoxyCompactList}\small\item\em Método que adiciona um canal de voz ao servidor. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classServer_a1b67a7103b6b26e8f03fff92816fcbf8}{operator==}} (\mbox{\hyperlink{classServer}{Server}} server)
+\end{DoxyCompactItemize}
 \doxysubsubsection*{Atributos Protegidos}
 \begin{DoxyCompactItemize}
 \item 
@@ -64,22 +76,22 @@ int {\bfseries owner\+\_\+id}
 bool {\bfseries invite\+\_\+code\+\_\+enabled} = false
 \begin{DoxyCompactList}\small\item\em Variável que guarda se o código de convite está habilitado. \end{DoxyCompactList}\item 
 \Hypertarget{classServer_a00cdc9361abb18a279ac64dde9488484}\label{classServer_a00cdc9361abb18a279ac64dde9488484} 
-std\+::string {\bfseries name}
+std\+::string {\bfseries name} = \"{}\"{}
 \begin{DoxyCompactList}\small\item\em Variável que guarda o nome do servidor. \end{DoxyCompactList}\item 
 \Hypertarget{classServer_ad40126d35fe76136fe3979ac8b95f327}\label{classServer_ad40126d35fe76136fe3979ac8b95f327} 
-std\+::string {\bfseries description}
+std\+::string {\bfseries description} = \"{}\"{}
 \begin{DoxyCompactList}\small\item\em Variável que guarda a descrição do servidor. \end{DoxyCompactList}\item 
 \Hypertarget{classServer_ac592be04f014e1ead22a1aee4dc6ce17}\label{classServer_ac592be04f014e1ead22a1aee4dc6ce17} 
-std\+::string {\bfseries invite\+\_\+code}
+std\+::string {\bfseries invite\+\_\+code} = \"{}\"{}
 \begin{DoxyCompactList}\small\item\em Variável que guarda o código de convite do servidor. \end{DoxyCompactList}\item 
 \Hypertarget{classServer_ac4fb1d9fbf7cfe948ff83da9461d8978}\label{classServer_ac4fb1d9fbf7cfe948ff83da9461d8978} 
 std\+::vector$<$ int $>$ {\bfseries members}
 \begin{DoxyCompactList}\small\item\em Vetor que guarda os ids dos membros do servidor. \end{DoxyCompactList}\item 
-\Hypertarget{classServer_a0a04033a40939abdc3bae580c08e4110}\label{classServer_a0a04033a40939abdc3bae580c08e4110} 
-std\+::vector$<$ \mbox{\hyperlink{classChannel}{Channel}} \texorpdfstring{$\ast$}{*} $>$ {\bfseries voice\+\_\+channels}
+\Hypertarget{classServer_ac1a39fffbd9f54ae4df06a1a47718623}\label{classServer_ac1a39fffbd9f54ae4df06a1a47718623} 
+std\+::vector$<$ \mbox{\hyperlink{classVoiceChannel}{Voice\+Channel}} $>$ {\bfseries voice\+\_\+channels}
 \begin{DoxyCompactList}\small\item\em Vetor que guarda os canais do servidor. \end{DoxyCompactList}\item 
-\Hypertarget{classServer_ade11c79c980f30304f33226cee1c6532}\label{classServer_ade11c79c980f30304f33226cee1c6532} 
-std\+::vector$<$ \mbox{\hyperlink{classChannel}{Channel}} \texorpdfstring{$\ast$}{*} $>$ {\bfseries text\+\_\+channels}
+\Hypertarget{classServer_af06d8b2bece18c9b56b71087744e8e9a}\label{classServer_af06d8b2bece18c9b56b71087744e8e9a} 
+std\+::vector$<$ \mbox{\hyperlink{classTextChannel}{Text\+Channel}} $>$ {\bfseries text\+\_\+channels}
 \begin{DoxyCompactList}\small\item\em Vetor que guarda os canais do servidor. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
@@ -109,6 +121,40 @@ Construtor de \doxylink{classServer}{Server}.
 
 
 \doxysubsection{Documentação das funções}
+\Hypertarget{classServer_a41dfe27464492780bda63734675a2d3f}\label{classServer_a41dfe27464492780bda63734675a2d3f} 
+\index{Server@{Server}!add\_TextChannel@{add\_TextChannel}}
+\index{add\_TextChannel@{add\_TextChannel}!Server@{Server}}
+\doxysubsubsection{\texorpdfstring{add\_TextChannel()}{add\_TextChannel()}}
+{\footnotesize\ttfamily void Server\+::add\+\_\+\+Text\+Channel (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classTextChannel}{Text\+Channel}}}]{channel }\end{DoxyParamCaption})}
+
+
+
+Método que adiciona um canal de texto ao servidor. 
+
+Adiciona um channel ao servidor.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em channel} & \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classServer_a6793c81d416427708fb331f7553a7dd2}\label{classServer_a6793c81d416427708fb331f7553a7dd2} 
+\index{Server@{Server}!add\_VoiceChannel@{add\_VoiceChannel}}
+\index{add\_VoiceChannel@{add\_VoiceChannel}!Server@{Server}}
+\doxysubsubsection{\texorpdfstring{add\_VoiceChannel()}{add\_VoiceChannel()}}
+{\footnotesize\ttfamily void Server\+::add\+\_\+\+Voice\+Channel (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classVoiceChannel}{Voice\+Channel}}}]{channel }\end{DoxyParamCaption})}
+
+
+
+Método que adiciona um canal de voz ao servidor. 
+
+Adiciona um channel ao servidor.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em channel} & \\
+\hline
+\end{DoxyParams}
 \Hypertarget{classServer_a2cd24ee8bdc617cf2c419cd7f57a2115}\label{classServer_a2cd24ee8bdc617cf2c419cd7f57a2115} 
 \index{Server@{Server}!addMember@{addMember}}
 \index{addMember@{addMember}!Server@{Server}}
@@ -143,11 +189,11 @@ Adiciona um channel ao servidor.
 {\em channel} & \\
 \hline
 \end{DoxyParams}
-\Hypertarget{classServer_a5652f777c63169732a7644acf81253c7}\label{classServer_a5652f777c63169732a7644acf81253c7} 
+\Hypertarget{classServer_ad31a5f11b76ff6ced52937e478757bff}\label{classServer_ad31a5f11b76ff6ced52937e478757bff} 
 \index{Server@{Server}!find\_channel@{find\_channel}}
 \index{find\_channel@{find\_channel}!Server@{Server}}
 \doxysubsubsection{\texorpdfstring{find\_channel()}{find\_channel()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{classChannel}{Channel}} \texorpdfstring{$\ast$}{*} Server\+::find\+\_\+channel (\begin{DoxyParamCaption}\item[{std\+::string}]{name }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily bool Server\+::find\+\_\+channel (\begin{DoxyParamCaption}\item[{std\+::string}]{name }\end{DoxyParamCaption})}
 
 
 
@@ -255,11 +301,11 @@ Retorna o id do dono do servidor.
 \begin{DoxyReturn}{Retorna}
 int 
 \end{DoxyReturn}
-\Hypertarget{classServer_ae3e718390be5251a9bcf8f41bf0489b9}\label{classServer_ae3e718390be5251a9bcf8f41bf0489b9} 
+\Hypertarget{classServer_a592c7274def0f2a2031720f3caa5716f}\label{classServer_a592c7274def0f2a2031720f3caa5716f} 
 \index{Server@{Server}!getTextChannels@{getTextChannels}}
 \index{getTextChannels@{getTextChannels}!Server@{Server}}
 \doxysubsubsection{\texorpdfstring{getTextChannels()}{getTextChannels()}}
-{\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{classChannel}{Channel}} \texorpdfstring{$\ast$}{*} $>$ Server\+::get\+Text\+Channels (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{classTextChannel}{Text\+Channel}} $>$ Server\+::get\+Text\+Channels (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
 
@@ -270,11 +316,11 @@ Retorna os text channels do servidor.
 \begin{DoxyReturn}{Retorna}
 std\+::vector$<$\+Text\+Channel \texorpdfstring{$\ast$}{*}$>$ 
 \end{DoxyReturn}
-\Hypertarget{classServer_aa2c056202ecb7983f6857adb7bdbe7a8}\label{classServer_aa2c056202ecb7983f6857adb7bdbe7a8} 
+\Hypertarget{classServer_a8210b82c86092ce6cb70478e273d949b}\label{classServer_a8210b82c86092ce6cb70478e273d949b} 
 \index{Server@{Server}!getVoiceChannels@{getVoiceChannels}}
 \index{getVoiceChannels@{getVoiceChannels}!Server@{Server}}
 \doxysubsubsection{\texorpdfstring{getVoiceChannels()}{getVoiceChannels()}}
-{\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{classChannel}{Channel}} \texorpdfstring{$\ast$}{*} $>$ Server\+::get\+Voice\+Channels (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{classVoiceChannel}{Voice\+Channel}} $>$ Server\+::get\+Voice\+Channels (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
 
@@ -327,6 +373,17 @@ true
 
 false 
 \end{DoxyReturn}
+\Hypertarget{classServer_a1b67a7103b6b26e8f03fff92816fcbf8}\label{classServer_a1b67a7103b6b26e8f03fff92816fcbf8} 
+\index{Server@{Server}!operator==@{operator==}}
+\index{operator==@{operator==}!Server@{Server}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily bool Server\+::operator== (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classServer}{Server}}}]{server }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em server} & Operador de igualdade. \\
+\hline
+\end{DoxyParams}
 \Hypertarget{classServer_ad2050a9b345d87ebfbb4fd540dafa0ff}\label{classServer_ad2050a9b345d87ebfbb4fd540dafa0ff} 
 \index{Server@{Server}!removeInviteCode@{removeInviteCode}}
 \index{removeInviteCode@{removeInviteCode}!Server@{Server}}

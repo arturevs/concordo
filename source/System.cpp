@@ -25,7 +25,7 @@ Channel* System::get_current_channel()
  */
 Server* System::get_current_server()
 {
-    return current_server;
+    return update_server;
 }
 
 /**
@@ -242,9 +242,11 @@ void System::remove_server(std::string name)
                 std::cout << "You don't have permission to remove this server" << '\n';
                 return;
             }
-            if(&servers[i] == current_server)
+            if(servers[i] == current_server)
             {
-                current_server = nullptr;
+                servers.erase(servers.begin() + i);
+                current_server = Server();
+                update_server = nullptr;
             }
             servers[i].server_clear();
             servers.erase(servers.begin() + i);
@@ -307,14 +309,15 @@ void System::enter_server(std::string name)
                 std::cout << "You are not a member of this server" << '\n';
                 return;
             }
-            else if(current_server = &servers[i])
+            else if(current_server == servers[i])
             {
                 std::cout << "You are already in this server" << '\n';
                 return;
             }
             else
             {
-                current_server = &servers[i];
+                update_server = &servers[i];
+                current_server = servers[i];
                 std::cout << "Server " << name << " selected successfully" << '\n';
                 return;
             }
@@ -330,12 +333,12 @@ void System::enter_server(std::string name)
  */
 void System::leave_server()
 {
-    if(current_server == nullptr)
+    if(current_server == Server())
     {
         std::cout << "You are not in a server" << '\n';
         return;
     }
-    current_server = nullptr;
+    current_server = Server();
     std::cout << "You left the server" << '\n';
 }
 
@@ -345,17 +348,31 @@ void System::leave_server()
  */
 void System::enter_channel(std::string name)
 {
-    Channel*  x = current_server->find_channel(name);
-    if(x == nullptr)
+    if(!(update_server->find_channel(name)))
     {
         std::cout << "Channel not found" << '\n';
         return;
     }
     else
     {
-        current_channel = x;
-        std::cout << "Channel " << name << " selected successfully" << '\n';
-        return;
+        for(int i = 0; i < update_server->getTextChannels().size(); i++)
+        {
+            if(update_server->getTextChannels()[i].getName() == name)
+            {
+                current_channel = &update_server->getTextChannels()[i];
+                std::cout << "Channel " << name << " selected successfully" << '\n';
+                return;
+            }
+        }
+        for(int i = 0; i < update_server->getVoiceChannels().size(); i++)
+        {
+            if(update_server->getVoiceChannels()[i].getName() == name)
+            {
+                current_channel = &update_server->getVoiceChannels()[i];
+                std::cout << "Channel " << name << " selected successfully" << '\n';
+                return;
+            }
+        }
     }
 }
 
@@ -370,6 +387,208 @@ void System::send_message()
     current_channel->send_message(message, logged_user);
 }
 
+/**
+ * @brief Salva os usuários do sistema
+ * 
+ */
+void System::salvarUsuarios()
+{
+    std::ofstream file;
+    file.open("usuarios.txt");
+    file << users.size() << '\n';
+    for(int i = 0; i < users.size(); i++)
+    {
+        file << users[i].getId()<< '\n';
+        file << users[i].getName() << '\n';
+        file << users[i].getEmail() << '\n';
+        file << users[i].getPassword() << '\n';
+    }
+    file.close();
+}
+
+/**
+ * @brief Salva os servidores do sistema
+ * 
+ */
+void System::salvarServidores()
+{
+    std::ofstream file;
+    file.open("servidores.txt");
+    for(int i = 0; i < servers.size(); i++)
+    {
+        file << servers.size() << '\n';
+        file << servers[i].getOwner() << '\n';
+        file << servers[i].getName() << '\n';
+        file << servers[i].getDescription() << '\n';
+        file << servers[i].getInviteCode() << '\n';
+        file << servers[i].getMembers().size() << '\n';
+        for(int j = 0; j < servers[i].getMembers().size(); j++)
+        {
+            file << servers[i].getMembers()[j] << '\n';
+        }
+        file << servers[i].getVoiceChannels().size() + servers[i].getTextChannels().size() << '\n';
+        for(int j = 0; j < servers[i].getVoiceChannels().size(); j++)
+        {
+            file << ((servers[i].getVoiceChannels())[j]).getName() << '\n';
+            file << "VOZ" << '\n';
+            file << 1 << '\n';
+            file << servers[i].getVoiceChannels()[i].getLastMessage().getSentBy() << '\n';
+            file << servers[i].getVoiceChannels()[i].getLastMessage().getSentAt() << '\n';
+            file << servers[i].getVoiceChannels()[i].getLastMessage().getContent() << '\n';
+        }
+        for(int j = 0; j < servers[i].getTextChannels().size(); j++)
+        {
+            file << ((servers[i].getTextChannels())[j]).getName() << '\n';
+            file << "TEXTO" << '\n';
+            file << servers[i].getTextChannels()[i].getMessages().size() << '\n';
+            for(int k = 0; k < servers[i].getTextChannels()[i].getMessages().size(); k++)
+            {
+                file << servers[i].getTextChannels()[i].getMessages()[k].getSentBy() << '\n';
+                file << servers[i].getTextChannels()[i].getMessages()[k].getSentAt() << '\n';
+                file << servers[i].getTextChannels()[i].getMessages()[k].getContent() << '\n';
+            }
+        }
+    }
+    file.close();
+}
+
+/**
+ * @brief Salva os dados do sistema
+ * 
+ */
+void System::salvar()
+{
+    salvarUsuarios();
+    salvarServidores();
+}
+
+/**
+ * @brief Carrega os usuários do sistema
+ * 
+ */
+void System::carregarUsuarios()
+{
+    std::ifstream file;
+    file.open("usuarios.txt");
+    int size;
+    file >> size;
+    file.ignore();
+    for(int i = 0; i < size; i++)
+    {
+        int id;
+        std::string name, email, password;
+        file >> id;
+        file.ignore();
+        std::getline(file, name);
+        file >> email;
+        file.ignore();
+        file >> password;
+        file.ignore();
+        User user(id, name, email, password);
+        users.push_back(user);
+        l_id_assigned = id;
+    }
+    file.close();
+}
+
+/**
+ * @brief Carrega os servidores do sistema
+ * 
+ */
+void System::carregarServidores()
+{
+    std::ifstream file;
+    file.open("servidores.txt");
+    int size;
+    file >> size;
+    file.ignore();
+    for(int i = 0; i < size; i++)
+    {
+        int owner;
+        std::string name, description, invite_code;
+        file >> owner;
+        file.ignore();
+        file >> name;
+        file.ignore();
+        std::getline(file, description);
+        file >> invite_code;
+        file.ignore();
+        Server server(owner, name, description, invite_code);
+        int size_members;
+        file >> size_members;
+        file.ignore();
+        for(int j = 0; j < size_members; j++)
+        {
+            int member;
+            file >> member;
+            file.ignore();
+            server.addMember(member);
+        }
+        int size_channels;
+        file >> size_channels;
+        file.ignore();
+        for(int j = 0; j < size_channels; j++)
+        {
+            std::string name, type;
+            file >> name;
+            file.ignore();
+            file >> type;
+            file.ignore();
+            if(type == "VOZ")
+            {
+                VoiceChannel* voice_channel = new VoiceChannel(name);
+                int size_messages;
+                file >> size_messages;
+                file.ignore();
+                for(int k = 0; k < size_messages; k++)
+                {
+                    int sent_by;
+                    std::string sent_at, content;
+                    file >> sent_by;
+                    file.ignore();
+                    file >> sent_at;
+                    file.ignore();
+                    std::getline(file, content, '\n');
+                    Message message(sent_at, sent_by, content);
+                    voice_channel->add_message(message);
+                }
+                server.add_VoiceChannel(*voice_channel);
+            }
+            else if(type == "TEXTO")
+            {
+                TextChannel* text_channel = new TextChannel(name);
+                int size_messages;
+                file >> size_messages;
+                file.ignore();
+                for(int k = 0; k < size_messages; k++)
+                {
+                    int sent_by;
+                    std::string sent_at, content;
+                    file >> sent_by;
+                    file.ignore();
+                    file >> sent_at;
+                    file.ignore();
+                    std::getline(file, content);
+                    Message message(sent_at, sent_by, content);
+                    text_channel->add_message(message);
+                }
+                server.add_TextChannel(*text_channel);
+            }
+        }
+        servers.push_back(server);
+    }
+    file.close();
+}
+
+/**
+ * @brief Carrega os dados salvos em arquivos de texto.
+ * 
+ */
+void System::carregar()
+{
+    carregarUsuarios();
+    carregarServidores();
+}
 
 //=============================================================================================
 
@@ -379,8 +598,9 @@ void System::send_message()
  */
 void System::executable()
 {
+    carregar();
     std::string command;
-    std::string file;
+    std::string file;   
     while(true)
     {
         bool LOGGED = logged_user != -1;
@@ -388,6 +608,7 @@ void System::executable()
         if(command == "quit")
         {
             std::cout << "Quitting Concordo" << '\n';
+            salvar();
             return;
         }
         else if(command == "create-user" && !LOGGED)
@@ -396,6 +617,7 @@ void System::executable()
             std::cin >> email >> password;
             std::getline(std::cin, name, '\n');
             create_user(email, password, name);
+            std::cout << users.size() << '\n';
         }
         else if(command == "login")
         {
@@ -451,34 +673,34 @@ void System::executable()
             {
                 leave_server();
             }
-            else if(command == "list-channels" && LOGGED && current_server != nullptr)
+            else if(command == "list-channels" && LOGGED && !(current_server == Server()))
             {
-                current_server->list_channels();
+                current_server.list_channels();
             }
-            else if(command == "create-channel" && LOGGED && current_server != nullptr)
+            else if(command == "create-channel" && LOGGED && !(current_server == Server()))
             {
                 std::string name, type;
                 std::cin >> name >> type;
-                current_server->create_channel(name, type);
+                update_server->create_channel(name, type);
                 std::cout << "Channel created successfully" << '\n';
             }
-            else if(command == "leave-channel" && LOGGED && current_server != nullptr && current_channel != nullptr)
+            else if(command == "leave-channel" && LOGGED && !(current_server == Server()) && current_channel != nullptr)
             {
                 current_channel = nullptr;
                 std::cout << "left the channel succsessfully" << '\n';
             }
-            else if(command == "enter-channel" && LOGGED && current_server != nullptr)
+            else if(command == "enter-channel" && LOGGED && !(current_server == Server()))
             {
                 //using enter_channel
                 std::string name;
                 std::cin >> name;
                 enter_channel(name);
             }
-            else if(command == "send-message" && LOGGED && current_server != nullptr && current_channel != nullptr)
+            else if(command == "send-message" && LOGGED && !(current_server == Server()) && current_channel != nullptr)
             {
                 send_message();
             }
-            else if(command == "list-messages" && LOGGED && current_server != nullptr && current_channel != nullptr)
+            else if(command == "list-messages" && LOGGED && !(current_server == Server()) && current_channel != nullptr)
             {
                 current_channel->list_messages();
             }

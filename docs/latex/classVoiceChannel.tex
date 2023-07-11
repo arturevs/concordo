@@ -1,5 +1,14 @@
 \doxysection{Referência da Classe Voice\+Channel}
 \hypertarget{classVoiceChannel}{}\label{classVoiceChannel}\index{VoiceChannel@{VoiceChannel}}
+
+
+Classe que representa um canal de voz.  
+
+
+
+
+{\ttfamily \#include $<$Voice\+Channel.\+h$>$}
+
 Diagrama de hierarquia da classe Voice\+Channel\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -15,9 +24,10 @@ Diagrama de hierarquia da classe Voice\+Channel\+:\begin{figure}[H]
 \begin{DoxyCompactList}\small\item\em Método que retorna a última mensagem enviada no canal. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classVoiceChannel_a18846c80f7df76ea3cdc4cb23842996d}{send}} (std\+::string message, int logged\+\_\+user\+\_\+id)
 \begin{DoxyCompactList}\small\item\em Método que envia uma mensagem no canal. \end{DoxyCompactList}\item 
-\Hypertarget{classVoiceChannel_a01a6f711c7e970c316da01e5530fe158}\label{classVoiceChannel_a01a6f711c7e970c316da01e5530fe158} 
-void {\bfseries list\+\_\+messages} ()
-\end{DoxyCompactItemize}
+void \mbox{\hyperlink{classVoiceChannel_a01a6f711c7e970c316da01e5530fe158}{list\+\_\+messages}} ()
+\begin{DoxyCompactList}\small\item\em Lista a última mensagem enviada no canal. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classVoiceChannel_ac690daf424123acac63987548440ab05}{add\+\_\+message}} (\mbox{\hyperlink{classMessage}{Message}} message)
+\begin{DoxyCompactList}\small\item\em Adiciona uma mensagem ao canal. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Membros Públicos herdados de \mbox{\hyperlink{classChannel}{Channel}}}
 \begin{DoxyCompactItemize}
 \item 
@@ -47,6 +57,11 @@ std\+::string {\bfseries name}
 \begin{DoxyCompactList}\small\item\em Variável que guarda o nome do canal. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
+\doxysubsection{Descrição detalhada}
+Classe que representa um canal de voz. 
+
+
+
 \doxysubsection{Construtores e Destrutores}
 \Hypertarget{classVoiceChannel_a118e763ead391561b1939831e39910fc}\label{classVoiceChannel_a118e763ead391561b1939831e39910fc} 
 \index{VoiceChannel@{VoiceChannel}!VoiceChannel@{VoiceChannel}}
@@ -68,6 +83,21 @@ Construtor de \doxylink{classVoiceChannel}{Voice\+Channel}.
 
 
 \doxysubsection{Documentação das funções}
+\Hypertarget{classVoiceChannel_ac690daf424123acac63987548440ab05}\label{classVoiceChannel_ac690daf424123acac63987548440ab05} 
+\index{VoiceChannel@{VoiceChannel}!add\_message@{add\_message}}
+\index{add\_message@{add\_message}!VoiceChannel@{VoiceChannel}}
+\doxysubsubsection{\texorpdfstring{add\_message()}{add\_message()}}
+{\footnotesize\ttfamily void Voice\+Channel\+::add\+\_\+message (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classMessage}{Message}}}]{message }\end{DoxyParamCaption})}
+
+
+
+Adiciona uma mensagem ao canal. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em message} & \\
+\hline
+\end{DoxyParams}
 \Hypertarget{classVoiceChannel_a4a73fc9d98e0c578a862a3f01f1de3d4}\label{classVoiceChannel_a4a73fc9d98e0c578a862a3f01f1de3d4} 
 \index{VoiceChannel@{VoiceChannel}!getLastMessage@{getLastMessage}}
 \index{getLastMessage@{getLastMessage}!VoiceChannel@{VoiceChannel}}
@@ -83,6 +113,16 @@ Retorna a última mensagem enviada no canal.
 \begin{DoxyReturn}{Retorna}
 \doxylink{classMessage}{Message} 
 \end{DoxyReturn}
+\Hypertarget{classVoiceChannel_a01a6f711c7e970c316da01e5530fe158}\label{classVoiceChannel_a01a6f711c7e970c316da01e5530fe158} 
+\index{VoiceChannel@{VoiceChannel}!list\_messages@{list\_messages}}
+\index{list\_messages@{list\_messages}!VoiceChannel@{VoiceChannel}}
+\doxysubsubsection{\texorpdfstring{list\_messages()}{list\_messages()}}
+{\footnotesize\ttfamily void Voice\+Channel\+::list\+\_\+messages (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Lista a última mensagem enviada no canal. 
+
 \Hypertarget{classVoiceChannel_a18846c80f7df76ea3cdc4cb23842996d}\label{classVoiceChannel_a18846c80f7df76ea3cdc4cb23842996d} 
 \index{VoiceChannel@{VoiceChannel}!send@{send}}
 \index{send@{send}!VoiceChannel@{VoiceChannel}}

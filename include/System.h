@@ -26,7 +26,8 @@ class System
         int logged_user = -1; //!< Variável que guarda o id do usuário logado.
         std::vector<User> users; //!< Vetor que guarda todos os usuários do sistema.
         std::vector<Server> servers; //!< Vetor que guarda todos os servidores do sistema.
-        Server* current_server = nullptr; //!< Ponteiro para o servidor atual.
+        Server current_server = Server(); //!< Ponteiro para o servidor atual.
+        Server* update_server; //!< Ponteiro para o servidor a ser atualizado.
         Channel* current_channel; //!< Ponteiro para o canal atual.
     public:
         Channel* get_current_channel(); //!< Retorna o ponteiro para o canal atual.
@@ -48,7 +49,13 @@ class System
         void enter_server(std::string name); //!< Método que entra em um servidor.
         void leave_server(); //!< Método que sai de um servidor.
         void enter_channel(std::string name); //!< Método que entra em um canal.
-        void send_message(); //!< Método que envia uma mensagem.
+        void send_message(); //!< Método que envia uma mens;gem.
+        void salvarUsuarios(); //!< Método que salva os usuários em um arquivo.
+        void salvarServidores(); //!< Método que salva os servidores em um arquivo.
+        void salvar(); //!< Método que salva os usuários e os servidores em arquivos.
+        void carregarUsuarios(); //!< Método que carrega os usuários de um arquivo.
+        void carregarServidores(); //!< Método que carrega os servidores de um arquivo.
+        void carregar(); //!< Método que carrega os usuários e os servidores de arquivos.
 };
 
 #endif

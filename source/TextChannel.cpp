@@ -11,6 +11,15 @@
 /**
  * @brief Construtor de TextChannel
  * 
+ */
+TextChannel::TextChannel() : Channel(name)
+{
+    this->name = "";
+}
+
+/**
+ * @brief Construtor de TextChannel
+ * 
  * @param name 
  */
 TextChannel::TextChannel(std::string name = "") : Channel(name)
@@ -38,10 +47,34 @@ void TextChannel::send(std::string message, int logged_user_id)
     messages.push_back(msg);
 }
 
+/**
+ * @brief Lista todas as mensagens enviadas no canal
+ * 
+ */
 void TextChannel::list_messages()
 {
     for (int i = 0; i < messages.size(); i++)
     {
         std::cout << messages[i].getSentBy() << " " << messages[i].getSentAt() << " " << messages[i].getContent() << std::endl;
     }
+}
+
+/**
+ * @brief Retorna todas as mensagens enviadas no canal
+ * 
+ * @return std::vector<Message> 
+ */
+std::vector<Message> TextChannel::getMessages()
+{
+    return messages;
+}
+
+/**
+ * @brief Adiciona uma mensagem ao canal
+ * 
+ * @param message 
+ */
+void TextChannel::add_message(Message message)
+{
+    messages.push_back(message);
 }

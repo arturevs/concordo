@@ -22,6 +22,7 @@ private:
 
 public:
     User(std::string name, std::string email, std::string password); //!< Construtor da classe User.
+    User(int id, std::string name, std::string email, std::string password); //!< Construtor da classe User.
     int getId(); //!< Método que retorna o id do usuário.
     void setId(int id); //!< Método que altera o id do usuário.
     std::string getName(); //!< Método que retorna o nome do usuário.

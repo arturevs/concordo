@@ -49,7 +49,19 @@ void \mbox{\hyperlink{classSystem_a6fb9f04c442be1d9f598428f30ccd666}{leave\+\_\+
 void \mbox{\hyperlink{classSystem_ac9fa73afbf96c8597ccd746846cc354f}{enter\+\_\+channel}} (std\+::string name)
 \begin{DoxyCompactList}\small\item\em Método que entra em um canal. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classSystem_a1a090e02723dd00a34ae8d9dfc5bb2cd}{send\+\_\+message}} ()
-\begin{DoxyCompactList}\small\item\em Método que envia uma mensagem. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Método que envia uma mens;gem. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classSystem_a312a63d2f37325eab6f60dc854eb3225}{salvar\+Usuarios}} ()
+\begin{DoxyCompactList}\small\item\em Método que salva os usuários em um arquivo. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classSystem_ad41e3afc544a601cd09e7cea56b504b0}{salvar\+Servidores}} ()
+\begin{DoxyCompactList}\small\item\em Método que salva os servidores em um arquivo. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classSystem_a6dfb0d3d7f064f6ad1a235551836b78d}{salvar}} ()
+\begin{DoxyCompactList}\small\item\em Método que salva os usuários e os servidores em arquivos. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classSystem_a14c262503c36202919226f62453c4443}{carregar\+Usuarios}} ()
+\begin{DoxyCompactList}\small\item\em Método que carrega os usuários de um arquivo. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classSystem_a3f942e14624a9b4ff035347607c60ee3}{carregar\+Servidores}} ()
+\begin{DoxyCompactList}\small\item\em Método que carrega os servidores de um arquivo. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classSystem_a6292e92395bf68d4275b28dd61703aee}{carregar}} ()
+\begin{DoxyCompactList}\small\item\em Método que carrega os usuários e os servidores de arquivos. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Atributos Privados}
 \begin{DoxyCompactItemize}
 \item 
@@ -65,9 +77,12 @@ std\+::vector$<$ \mbox{\hyperlink{classUser}{User}} $>$ {\bfseries users}
 \Hypertarget{classSystem_a943ce8571d2b4ab0c87bade98db66b3d}\label{classSystem_a943ce8571d2b4ab0c87bade98db66b3d} 
 std\+::vector$<$ \mbox{\hyperlink{classServer}{Server}} $>$ {\bfseries servers}
 \begin{DoxyCompactList}\small\item\em Vetor que guarda todos os servidores do sistema. \end{DoxyCompactList}\item 
-\Hypertarget{classSystem_abf05e9087e3deb3afceadc8f44af09a4}\label{classSystem_abf05e9087e3deb3afceadc8f44af09a4} 
-\mbox{\hyperlink{classServer}{Server}} \texorpdfstring{$\ast$}{*} {\bfseries current\+\_\+server} = nullptr
+\Hypertarget{classSystem_afb1f92d0207bfdf35c5178ee4d996886}\label{classSystem_afb1f92d0207bfdf35c5178ee4d996886} 
+\mbox{\hyperlink{classServer}{Server}} {\bfseries current\+\_\+server} = \mbox{\hyperlink{classServer}{Server}}()
 \begin{DoxyCompactList}\small\item\em Ponteiro para o servidor atual. \end{DoxyCompactList}\item 
+\Hypertarget{classSystem_ae524e17069fd625f9076bce351453be3}\label{classSystem_ae524e17069fd625f9076bce351453be3} 
+\mbox{\hyperlink{classServer}{Server}} \texorpdfstring{$\ast$}{*} {\bfseries update\+\_\+server}
+\begin{DoxyCompactList}\small\item\em Ponteiro para o servidor a ser atualizado. \end{DoxyCompactList}\item 
 \Hypertarget{classSystem_a7e3fc3093b96143ef1528c11b4f42b6e}\label{classSystem_a7e3fc3093b96143ef1528c11b4f42b6e} 
 \mbox{\hyperlink{classChannel}{Channel}} \texorpdfstring{$\ast$}{*} {\bfseries current\+\_\+channel}
 \begin{DoxyCompactList}\small\item\em Ponteiro para o canal atual. \end{DoxyCompactList}\end{DoxyCompactItemize}
@@ -79,7 +94,37 @@ Classe que representa o sistema.
 
 
 \doxysubsection{Documentação das funções}
-\Hypertarget{classSystem_aa6e9d78181c109bd512cb8df3f58a2ef}\label{classSystem_aa6e9d78181c109bd512cb8df3f58a2ef} 
+\Hypertarget{classSystem_a6292e92395bf68d4275b28dd61703aee}\label{classSystem_a6292e92395bf68d4275b28dd61703aee} 
+\index{System@{System}!carregar@{carregar}}
+\index{carregar@{carregar}!System@{System}}
+\doxysubsubsection{\texorpdfstring{carregar()}{carregar()}}
+{\footnotesize\ttfamily void System\+::carregar (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Método que carrega os usuários e os servidores de arquivos. 
+
+Carrega os dados salvos em arquivos de texto.\Hypertarget{classSystem_a3f942e14624a9b4ff035347607c60ee3}\label{classSystem_a3f942e14624a9b4ff035347607c60ee3} 
+\index{System@{System}!carregarServidores@{carregarServidores}}
+\index{carregarServidores@{carregarServidores}!System@{System}}
+\doxysubsubsection{\texorpdfstring{carregarServidores()}{carregarServidores()}}
+{\footnotesize\ttfamily void System\+::carregar\+Servidores (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Método que carrega os servidores de um arquivo. 
+
+Carrega os servidores do sistema.\Hypertarget{classSystem_a14c262503c36202919226f62453c4443}\label{classSystem_a14c262503c36202919226f62453c4443} 
+\index{System@{System}!carregarUsuarios@{carregarUsuarios}}
+\index{carregarUsuarios@{carregarUsuarios}!System@{System}}
+\doxysubsubsection{\texorpdfstring{carregarUsuarios()}{carregarUsuarios()}}
+{\footnotesize\ttfamily void System\+::carregar\+Usuarios (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Método que carrega os usuários de um arquivo. 
+
+Carrega os usuários do sistema.\Hypertarget{classSystem_aa6e9d78181c109bd512cb8df3f58a2ef}\label{classSystem_aa6e9d78181c109bd512cb8df3f58a2ef} 
 \index{System@{System}!change\_server\_description@{change\_server\_description}}
 \index{change\_server\_description@{change\_server\_description}!System@{System}}
 \doxysubsubsection{\texorpdfstring{change\_server\_description()}{change\_server\_description()}}
@@ -316,7 +361,37 @@ Remove um servidor do sistema.
 {\em name} & nome do servidor \\
 \hline
 \end{DoxyParams}
-\Hypertarget{classSystem_a1a090e02723dd00a34ae8d9dfc5bb2cd}\label{classSystem_a1a090e02723dd00a34ae8d9dfc5bb2cd} 
+\Hypertarget{classSystem_a6dfb0d3d7f064f6ad1a235551836b78d}\label{classSystem_a6dfb0d3d7f064f6ad1a235551836b78d} 
+\index{System@{System}!salvar@{salvar}}
+\index{salvar@{salvar}!System@{System}}
+\doxysubsubsection{\texorpdfstring{salvar()}{salvar()}}
+{\footnotesize\ttfamily void System\+::salvar (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Método que salva os usuários e os servidores em arquivos. 
+
+Salva os dados do sistema.\Hypertarget{classSystem_ad41e3afc544a601cd09e7cea56b504b0}\label{classSystem_ad41e3afc544a601cd09e7cea56b504b0} 
+\index{System@{System}!salvarServidores@{salvarServidores}}
+\index{salvarServidores@{salvarServidores}!System@{System}}
+\doxysubsubsection{\texorpdfstring{salvarServidores()}{salvarServidores()}}
+{\footnotesize\ttfamily void System\+::salvar\+Servidores (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Método que salva os servidores em um arquivo. 
+
+Salva os servidores do sistema.\Hypertarget{classSystem_a312a63d2f37325eab6f60dc854eb3225}\label{classSystem_a312a63d2f37325eab6f60dc854eb3225} 
+\index{System@{System}!salvarUsuarios@{salvarUsuarios}}
+\index{salvarUsuarios@{salvarUsuarios}!System@{System}}
+\doxysubsubsection{\texorpdfstring{salvarUsuarios()}{salvarUsuarios()}}
+{\footnotesize\ttfamily void System\+::salvar\+Usuarios (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Método que salva os usuários em um arquivo. 
+
+Salva os usuários do sistema.\Hypertarget{classSystem_a1a090e02723dd00a34ae8d9dfc5bb2cd}\label{classSystem_a1a090e02723dd00a34ae8d9dfc5bb2cd} 
 \index{System@{System}!send\_message@{send\_message}}
 \index{send\_message@{send\_message}!System@{System}}
 \doxysubsubsection{\texorpdfstring{send\_message()}{send\_message()}}
@@ -324,7 +399,7 @@ Remove um servidor do sistema.
 
 
 
-Método que envia uma mensagem. 
+Método que envia uma mens;gem. 
 
 Envia uma mensagem para o canal atual.\Hypertarget{classSystem_a03199ac183c45a4bf5402cf3cfeacd78}\label{classSystem_a03199ac183c45a4bf5402cf3cfeacd78} 
 \index{System@{System}!set\_server\_invite\_code@{set\_server\_invite\_code}}

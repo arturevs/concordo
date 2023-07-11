@@ -11,6 +11,10 @@
 #include "Channel.h"
 #include "Message.h"
 
+/**
+ * @brief Classe que representa um canal de voz
+ * 
+ */
 class VoiceChannel : public Channel
 {
     private:
@@ -20,6 +24,7 @@ class VoiceChannel : public Channel
         Message getLastMessage(); //!< Método que retorna a última mensagem enviada no canal.
         void send(std::string message, int logged_user_id); //!< Método que envia uma mensagem no canal.
         void list_messages();
+        void add_message(Message message);
 };
 
 #endif
